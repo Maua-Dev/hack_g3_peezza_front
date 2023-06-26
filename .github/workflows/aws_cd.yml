@@ -2,9 +2,8 @@ name: AWS CD
 on:
   push:
     branches:
-      - dev
-      - homolog
       - prod
+      
 jobs:
   DeployToAWS:
     environment: 
