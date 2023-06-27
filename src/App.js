@@ -1,11 +1,13 @@
-import './App.css';
+import React from 'react';
+import Home from "./front/Home/Home";
+import Payment from "./front/Payment/Payment";
+import { Route, Routes } from 'react-router-dom';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <h1 className="Title">Meu aplicativo! 🎃</h1>
-    </div>
+    <Routes>
+      <Route element={<Home />} path="/" exact />
+      <Route element={<Payment />} path="/pagamento" />
+    </Routes>
   );
-}
-
-export default App;
+};

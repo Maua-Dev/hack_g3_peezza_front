@@ -1,0 +1,60 @@
+{
+    "cardapio": [
+      {
+        "id": 77,
+        "nome": "Torta de Chocolate",
+        "descrição": "Deliciosa torta de chocolate com cobertura cremosa.",
+        "valor": 7.5,
+        "imagem": null
+      },
+      {
+        "id": 78,
+        "nome": "Sorvete de Baunilha",
+        "descrição": "Sorvete de baunilha cremoso e refrescante.",
+        "valor": 4,
+        "imagem": null
+      },
+      {
+        "id": 79,
+        "nome": "Pudim de Leite",
+        "descrição": "Pudim de leite tradicional com calda caramelizada.",
+        "valor": 5.5,
+        "imagem": null
+      },
+      {
+        "id": 80,
+        "nome": "Cheesecake de Morango",
+        "descrição": "Cheesecake com base de biscoito e cobertura de morango.",
+        "valor": 8,
+        "imagem": null
+      },
+      {
+        "id": 81,
+        "nome": "Brownie de Chocolate",
+        "descrição": "Brownie macio e molhadinho com pedaços de chocolate.",
+        "valor": 6.5,
+        "imagem": null
+      },
+      {
+        "id": 82,
+        "nome": "Mousse de Maracujá",
+        "descrição": "Mousse leve e refrescante com sabor de maracujá.",
+        "valor": 4.5,
+        "imagem": null
+      },
+      {
+        "id": 83,
+        "nome": "Tiramisu",
+        "descrição": "Sobremesa italiana clássica à base de café e queijo mascarpone.",
+        "valor": 9.5,
+        "imagem": null
+      },
+      {
+        "id": 84,
+        "nome": "Creme Brulée",
+        "descrição": "Creme de baunilha com uma crosta caramelizada por cima.",
+        "valor": 7,
+        "imagem": null
+      }
+    ]
+  }
