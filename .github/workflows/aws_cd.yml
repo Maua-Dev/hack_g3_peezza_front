@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - prod
+      - dev
       
 jobs:
   DeployToAWS:
