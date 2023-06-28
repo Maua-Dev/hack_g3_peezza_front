@@ -7,7 +7,6 @@ export const Cardapio = ({ pizza, bebida, sobremesa }) => {
 
   const [carrinho, setCarrinho] = useState([]);
 
-
   const [clickedItem, setClickedItem] = useState(null);
 
   const handleItemClick = (Item) => {
@@ -15,20 +14,25 @@ export const Cardapio = ({ pizza, bebida, sobremesa }) => {
   };
 
   const handleButtonClick = (item) => {
-    const existingItem = carrinho.find((cartItem) => cartItem.id === item.id);
+    const carrinhoSalvo = localStorage.getItem('carrinho');
+    let novoCarrinho;
+    if (carrinhoSalvo) {
+      novoCarrinho = JSON.parse(carrinhoSalvo);
+    } else {
+      novoCarrinho = [];
+    }
+    const existingItem = novoCarrinho.find((cartItem) => cartItem.id === item.id);
     if (existingItem) {
-      const updatedCarrinho = carrinho.map((cartItem) =>
+      const updatedCarrinho = novoCarrinho.map((cartItem) =>
         cartItem.id === item.id ? { ...cartItem, quantidade: cartItem.quantidade + 1 } : cartItem
       );
-      setCarrinho(updatedCarrinho);
-      localStorage.setItem('carrinho', JSON.stringify(updatedCarrinho));
+      novoCarrinho = updatedCarrinho;
     } else {
-      const updatedCarrinho = [...carrinho, { ...item, quantidade: 1 }]
-      setCarrinho(updatedCarrinho);
-      localStorage.setItem('carrinho', JSON.stringify(updatedCarrinho));
+      novoCarrinho.push({ ...item, quantidade: 1 });
     }
-    console.log(carrinho)
-  }
+    localStorage.setItem('carrinho', JSON.stringify(novoCarrinho));
+    setCarrinho(novoCarrinho);
+  };
 
   return (
     <div className='Cardapio'>
