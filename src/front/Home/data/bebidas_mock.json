@@ -3,56 +3,56 @@
      {
        "id": 69,
        "nome": "Refrigerante Coca-Cola",
-       "descrição": "Refrigerante de cola tradicional.",
+       "descricao": "Refrigerante de cola tradicional.",
        "valor": 5,
        "imagem": null
      },
      {
        "id": 70,
        "nome": "Suco de Laranja Natural",
-       "descrição": "Suco fresco de laranja espremida na hora.",
+       "descricao": "Suco fresco de laranja espremida na hora.",
        "valor": 6.5,
        "imagem": null
      },
      {
        "id": 71,
        "nome": "Água Mineral sem Gás",
-       "descrição": "Água mineral natural sem adição de gás.",
+       "descricao": "Água mineral natural sem adição de gás.",
        "valor": 3,
        "imagem": null
      },
      {
        "id": 72,
        "nome": "Chá Gelado de Limão",
-       "descrição": "Chá gelado de limão refrescante.",
+       "descricao": "Chá gelado de limão refrescante.",
        "valor": 4.5,
        "imagem": null
      },
      {
        "id": 73,
        "nome": "Cerveja Pilsen",
-       "descrição": "Cerveja pilsen clássica e refrescante.",
+       "descricao": "Cerveja pilsen clássica e refrescante.",
        "valor": 7,
        "imagem": null
      },
      {
        "id": 74,
        "nome": "Milkshake de Morango",
-       "descrição": "Milkshake cremoso de morango.",
+       "descricao": "Milkshake cremoso de morango.",
        "valor": 8.5,
        "imagem": null
      },
      {
        "id": 75,
        "nome": "Coquetel de Frutas Tropicais",
-       "descrição": "Coquetel refrescante de frutas tropicais.",
+       "descricao": "Coquetel refrescante de frutas tropicais.",
        "valor": 6.5,
        "imagem": null
      },
      {
       "id": 76,
       "nome": "Café Expresso",
-      "descrição": "Café expresso encorpado e aromático.",
+      "descricao": "Café expresso encorpado e aromático.",
       "valor": 3.5,
       "imagem": null
      }

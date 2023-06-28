@@ -17,7 +17,6 @@ function Home() {
   const [pizza, setPizza] = useState([]);
   const [bebida, setBebida] = useState([]);
   const [sobremesa, setSobremesa] = useState([]);
-  const [clickedItem, setClickedItem] = useState(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -32,34 +31,12 @@ function Home() {
     getData();
   }, []);
 
-  useEffect(() => {
+  const handleCarrinhoClick = () => {
+    setCarrinhoAtivo(!carrinhoAtivo);
     const carrinhoSalvo = localStorage.getItem('carrinho');
     if (carrinhoSalvo) {
       setCarrinho(JSON.parse(carrinhoSalvo));
     }
-  }, []);
-
-  const handleItemClick = (item) => {
-    setClickedItem(item.id);
-    const existingItem = carrinho.find((cartItem) => cartItem.id === item.id);
-    if (existingItem) {
-      const updatedCarrinho = carrinho.map((cartItem) =>
-        cartItem.id === item.id ? { ...cartItem, quantidade: cartItem.quantidade + 1 } : cartItem
-      );
-      setCarrinho(updatedCarrinho);
-      localStorage.setItem('carrinho', JSON.stringify(updatedCarrinho));
-    } else {
-      const updatedCarrinho = [...carrinho, { ...item, quantidade: 1 }]
-      setCarrinho(updatedCarrinho);
-      localStorage.setItem('carrinho', JSON.stringify(updatedCarrinho));
-    }
-    setTimeout(() => {
-      setClickedItem(null);
-    }, 100);
-  };
-
-  const handleCarrinhoClick = () => {
-    setCarrinhoAtivo(!carrinhoAtivo);
   };
 
   const handleExcluirItem = (index) => {
@@ -85,14 +62,10 @@ function Home() {
     ));
   };
 
-  useEffect(() => {
-    console.log(carrinho);
-  }, [carrinho]);
-
   return (
     <div className='App'>
       <Top></Top>
-      <Cardapio pizza={pizza} bebida={bebida} sobremesa={sobremesa} handleItemClick={handleItemClick} clickedItem={clickedItem} />
+      <Cardapio pizza={pizza} bebida={bebida} sobremesa={sobremesa}/>
       <div className={`Carrinho ${carrinhoAtivo ? 'Active' : ''}`}>
         <button onClick={handleCarrinhoClick}>
           <span>
