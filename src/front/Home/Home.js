@@ -5,6 +5,7 @@ import { Top } from './Top/Top'
 import { BsFillTrash3Fill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import { fetchData } from './data/repo_mock'; // --> Acione quando quiser usar com MOCK
+import { Cardapio } from './Cardapio/Cardapio';
 // import { fetchData } from './data/repo_fastapi'; // --> Acione quando quiser usar com BD
 
 function Home() {
@@ -68,20 +69,6 @@ function Home() {
     localStorage.setItem('carrinho', JSON.stringify(novoCarrinho));
   };
 
-  const ShowItens = (item) => {
-    return item.map((Item) => (
-      <button
-        key={Item.id}
-        className={`Item ${clickedItem === Item.id ? 'Clicked' : ''}`}
-        onClick={() => handleItemClick(Item)}
-      >
-        <header className='Nome'>{Item.nome}</header>
-        <label className='Descricao'>{Item.descrição}</label>
-        <label className='Valor'>R$ {Item.valor}</label>
-      </button>
-    ));
-  };
-
   const ShowCarrinho = () => {
     return carrinho.map((Item, index) => (
       <div className='ItemCarrinho' key={index}>
@@ -105,20 +92,7 @@ function Home() {
   return (
     <div className='App'>
       <Top></Top>
-      <div className='Cardapio'>
-        <h1>Pizzas</h1>
-        <div className='Pizzas'>
-          {ShowItens(pizza)}
-        </div>
-        <h1>Bebidas</h1>
-        <div className='Bebidas'>
-          {ShowItens(bebida)}
-        </div>
-        <h1>Sobremesas</h1>
-        <div className='Sobremesa'>
-          {ShowItens(sobremesa)}
-        </div>
-      </div>
+      <Cardapio pizza={pizza} bebida={bebida} sobremesa={sobremesa} handleItemClick={handleItemClick} clickedItem={clickedItem} />
       <div className={`Carrinho ${carrinhoAtivo ? 'Active' : ''}`}>
         <button onClick={handleCarrinhoClick}>
           <span>
