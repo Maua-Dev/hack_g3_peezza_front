@@ -1,5 +1,6 @@
 .Top {
   display: grid;
+  position: fixed;
   transition: height 0.3s ease;
   border-radius: 0px 0px 20px 20px;
   background-color: #ffa740;

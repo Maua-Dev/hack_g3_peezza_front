@@ -104,7 +104,9 @@
     .ItemBoxSlctd .box {
       display: flex;
       flex-direction: column;
+      width: 65%;
       top: 25vh;
+      margin-left: 17.5%;
       border-radius: 10px;
       height: 50vh;
       background-color: white;
@@ -168,12 +170,10 @@
       width: 104%;
       border-radius: 0 0 10px 10px;
       border: 0;
-      transition: filter 0.1s;
-    }
-    .ItemBoxSlctd .box button:hover {
-      filter: brightness(100%);
+      transition: background-color 0.125s;
     }
 
     .ItemBoxSlctd .box button:hover:active {
-      filter: brightness(80%);
+      background-color: green;
+      transition: background-color 0.125s;
     }
