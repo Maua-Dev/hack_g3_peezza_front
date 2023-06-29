@@ -1,6 +1,7 @@
 import React from "react";
 import { BsFillTrash3Fill } from "react-icons/bs";
 
+
 export const ShowCarrinho = (carrinho, handleExcluirItem) => {
     return carrinho.map((Item, index) => (
       <div className='ItemCarrinho' key={index}>
@@ -16,3 +17,27 @@ export const ShowCarrinho = (carrinho, handleExcluirItem) => {
       </div>
     ));
   };
+
+export const Cadastro = (nome, contato, setNome, setContato) => {
+
+  const handleNomeChange = (event) => {
+    setNome(event.target.value);
+  };
+
+  const handleContatoChange = (event) => {
+    setContato(event.target.value);
+  };
+
+  return (
+    <div className='Cadastro'>
+      <h1>
+        Nome *
+        <input value={nome} onChange={handleNomeChange}></input>
+      </h1>
+      <h1>
+        Número de Contato *
+        <input value={contato} onChange={handleContatoChange}></input>
+      </h1>
+    </div>
+  );
+};

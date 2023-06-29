@@ -49,6 +49,7 @@
 }
 
 .Cadastro h1 {
+  color: white;
   display: grid;
   margin-left: 4%;
   font-size: 3vh;
