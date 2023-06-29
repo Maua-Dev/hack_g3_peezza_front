@@ -20,7 +20,7 @@ export const createNewCtgr = (Tittle,category, handleItemClick, clickedItem) => 
 export const showItens = (item, handleItemClick, clickedItem) => {
     return item.map((Item) => (
       <div className={`Item ${clickedItem === Item ? 'Clicked' : ''}`}>
-        <img className={'imagem'}src="Images/Mussarela.png" alt="Imagem"></img>
+        <img className={'imagem'} src={Item.imagem} alt="Imagem"></img>
         <header className='nome'>{Item.nome}</header>
         <label className='valor'>R$ {Item.valor}</label>
         <button onClick={() => handleItemClick(Item)}></button>
