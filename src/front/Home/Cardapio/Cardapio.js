@@ -5,8 +5,6 @@ import { useState } from "react";
 
 export const Cardapio = ({ pizza, bebida, sobremesa }) => {
 
-  const [carrinho, setCarrinho] = useState([]);
-
   const [clickedItem, setClickedItem] = useState(null);
 
   const handleItemClick = (Item) => {
@@ -31,7 +29,6 @@ export const Cardapio = ({ pizza, bebida, sobremesa }) => {
       novoCarrinho.push({ ...item, quantidade: 1 });
     }
     localStorage.setItem('carrinho', JSON.stringify(novoCarrinho));
-    setCarrinho(novoCarrinho);
   };
 
   return (

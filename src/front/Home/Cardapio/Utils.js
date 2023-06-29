@@ -21,8 +21,8 @@ export const showItens = (item, handleItemClick, clickedItem) => {
     return item.map((Item) => (
       <div className={`Item ${clickedItem === Item ? 'Clicked' : ''}`}>
         <img className={'imagem'}src="Images/Mussarela.png" alt="Imagem"></img>
-        <header className='Nome'>{Item.nome}</header>
-        <label className='Valor'>R$ {Item.valor}</label>
+        <header className='nome'>{Item.nome}</header>
+        <label className='valor'>R$ {Item.valor}</label>
         <button onClick={() => handleItemClick(Item)}></button>
       </div>
     ));

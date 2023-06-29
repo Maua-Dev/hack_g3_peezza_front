@@ -27,10 +27,6 @@ export const Bottom = () => {
     localStorage.setItem('carrinho', JSON.stringify(novoCarrinho));
   };
 
-  useEffect(() => {
-    console.log(carrinho);
-  }, [carrinho]);
-
   return (
     <div className={`Carrinho ${carrinhoAtivo ? 'Active' : ''}`}>
         <button onClick={handleCarrinhoClick}>
