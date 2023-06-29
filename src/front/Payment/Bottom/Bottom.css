@@ -1,0 +1,27 @@
+.Bottom {
+    display: grid;
+    position: fixed;
+    border-radius: 20px 20px 0px 0px;
+    background-color: #ffa740;
+    justify-items: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0px 3px 4px #00000040;
+    }
+  
+    .Bottom header {
+      color: #fffdfd;
+      font-family: "Roboto-Light", Helvetica;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: 0;
+      line-height: normal;
+      position: relative;
+      white-space: nowrap;
+      width: fit-content;
+    }
+  
+  
+  

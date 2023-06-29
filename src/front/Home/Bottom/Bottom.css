@@ -3,10 +3,10 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   transition: height 0.3s ease;
-  background: rgb(252, 179, 54);
+  background: #ffa740;
   justify-items: center;
   align-items: center;
-  height: 10%;
+  height: 8%;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -23,8 +23,10 @@
 }
 
 .Carrinho button {
+  top: -20%;
+  position: relative;
   margin-top: 20px;
-  background-color: #f5f5f5;
+  color: #f5f5f5;
   border: none;
   background: none;
   border-radius: 4px;

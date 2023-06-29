@@ -1,0 +1,17 @@
+.mid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 77.75%;
+    align-items: center;
+  }
+
+  .mid .box {
+    margin-top: 13%;
+    overflow-y: scroll;
+  }
+
+  .mid .box h1 {
+    color: white;
+  }
+
