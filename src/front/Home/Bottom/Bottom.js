@@ -2,8 +2,8 @@ import React from "react";
 import "./Bottom.css";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import { Cadastro, ShowCarrinho } from './Utils';
 import { TiShoppingCart } from 'react-icons/ti';
+import { Cadastro, CarrinhoBox, ShowCarrinho } from './Utils';
 
 export const Bottom = () => {
 
@@ -31,12 +31,12 @@ export const Bottom = () => {
     localStorage.setItem('carrinho', JSON.stringify(novoCarrinho));
   };
 
-  useEffect(() => {
-    validarBotaoContinuar();
-  }, [nome, contato, carrinho]);
+  
 
   const handleContinueClick = () => {
-    // Lógica a ser executada quando o botão Continuar for clicado
+    localStorage.setItem('nome', JSON.stringify(nome))
+    localStorage.setItem('contato', JSON.stringify(contato))
+    localStorage.setItem('valorTotal', JSON.stringify(valorTotal))
   };
 
   const validarBotaoContinuar = () => {
@@ -46,6 +46,10 @@ export const Bottom = () => {
     setContinuarAtivo(isBotaoAtivo);
   };
 
+  useEffect(() => {
+      validarBotaoContinuar(); // eslint-disable-next-line
+    }, [nome, contato, carrinho]);
+    
   return (
     <div className={`Carrinho ${carrinhoAtivo ? 'Active' : ''}`}>
         <button onClick={handleCarrinhoClick}>
@@ -54,13 +58,11 @@ export const Bottom = () => {
           </span>
         </button>
         {Cadastro(nome,contato,setNome,setContato)}
-        <div className='CarrinhoBox'>
-          {ShowCarrinho(carrinho,handleExcluirItem)}
-        </div>
+        {CarrinhoBox(carrinho,handleExcluirItem)}
         <div className='DownCarrinho'>
           <h2>Total: R$ {valorTotal.toFixed(2)}</h2>
           {continuarAtivo ? (
-          <Link to="/pagamento">
+          <Link to="/pagamento" onClick={handleContinueClick}>
             <button>Continuar</button>
           </Link>
           ) : (
