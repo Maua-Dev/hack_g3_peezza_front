@@ -54,13 +54,16 @@ export const Bottom = () => {
     <div className={`Carrinho ${carrinhoAtivo ? 'Active' : ''}`}>
         <button onClick={handleCarrinhoClick}>
           <span>
-          R$ {valorTotal.toFixed(2)} <TiShoppingCart size={'35px'} />Carrinho
+            Carrinho
           </span>
         </button>
         {Cadastro(nome,contato,setNome,setContato)}
         {CarrinhoBox(carrinho,handleExcluirItem)}
         <div className='DownCarrinho'>
-          <h2>Total: R$ {valorTotal.toFixed(2)}</h2>
+          <div className="TotalBox">
+            <h2>R$ {valorTotal.toFixed(2)}</h2>
+            <TiShoppingCart className="IconCart" size={'35px'} />
+          </div>
           {continuarAtivo ? (
           <Link to="/pagamento" onClick={handleContinueClick}>
             <button>Continuar</button>

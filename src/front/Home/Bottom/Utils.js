@@ -31,14 +31,15 @@ export const CarrinhoBox = (carrinho,handleExcluirItem) => {
   const ShowCarrinho = (carrinho, handleExcluirItem) => {
     return carrinho.map((Item, index) => (
       <div className='ItemCarrinho' key={index}>
-        <img className="image"></img>
+        <img className="image" src={Item.imagem} alt={Item.nome}></img>
         <div className='Detalhes'>
           <header className='Nome'>{Item.nome}</header>
-          <label className='Descricao'>{Item.descricao}</label>
-        </div>
-        <div className='DivValores'>
           <label className='Valor'>R$ {Item.valor}</label>
-          <button className='Lixeira' onClick={() => handleExcluirItem(index)}><BsFillTrash3Fill size={'25px'} /></button>
+        </div>
+        <div className='DivQuantidade'>
+          <div className='Lixeira' onClick={() => handleExcluirItem(index)}>
+            <BsFillTrash3Fill size={'20px'} />
+          </div>
           <input className='Quantidade' value={Item.quantidade} readOnly></input>
         </div>
       </div>

@@ -39,7 +39,6 @@
 
 .Cadastro {
   display: flex;
-  border-bottom: 2px solid #322C2C;
   border-radius: 10px 10px 0 0;
   background-color: white;
   justify-content: space-evenly;
@@ -62,109 +61,108 @@
 
 .ItemCarrinho {
   display: flex;
-  flex-direction: column;
+  position: relative;
+  display: flex;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 10);
   margin-left: 2.5%;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   border: 0;
-  align-items: center;
   margin-top: 5px;
   margin-bottom: 5px;
-  border: 1px solid #322C2C;
   height: 120px;
   width: 95%;
   
 }
 
 .ItemCarrinho .image {
+  align-self: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 10);
+  border-radius: 10px;
   background-color: #322C2C;
-  width: 10%;
-  height: 10%;
+  margin-left: 4%;
+  width: 30%;
+  height: 80%;
   
 }
 
 .ItemCarrinho .Detalhes {
-  display: flex;
-  flex-direction: column;
-  max-width: 70%;
-  min-width: 70%;
+  margin-top: 8%;
+  margin-left: 10px;
+  height: 100%;
+  max-width: 40%;
+  min-width: 40%;
 }
 
 .ItemCarrinho .Nome {
-  margin-left: 10px;
-  margin-top: 10px;
+  align-self: center;
   max-width: 100%;
   text-align: left;
   font-weight: bold;
-  font-size: large;
-  font-family: 'arial';
+  font-size: medium;
+  font-family: "Roboto-Light", Helvetica;
   white-space: pre-wrap;
-}
-
-.ItemCarrinho .Descricao {
-  max-width: 80%;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-right: 10px;
-  text-align: justify;
-  font-size: small;
-  font-family: 'arial';
-  white-space: pre-wrap;
-}
-
-.DivValores {
-  position: relative;
-  justify-self: center;
-  display: flex;
-  transform: translate(0%, 25%);
-  align-items: center;
-  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 10);
-  width: 80px;
-  height: 40px;
 }
 
 .ItemCarrinho .Valor {
-  position: relative;
-  font-weight: bold;
   text-align: left;
-  transform: translate(0%, -170%);
-  margin-right: 10px;
-  font-family: 'arial';
+  font-family: "Roboto-Light", Helvetica;
   font-size: medium;
 }
 
+.ItemCarrinho .DivQuantidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 23%;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 10);
+  height: 25%;
+  margin-left: 6%;
+  width: 15%;
+  border-radius: 10px;
+  bottom: 0;
+}
+
+
 .ItemCarrinho .Quantidade {
-  font-size: larger;
+  font-size: large;
+  background: transparent;
   width: 20px;
-  position: absolute;
-  transform: translate(150%, 0%);
+  border: 0;
   text-align: center;
 }
 
 .ItemCarrinho .Lixeira {
+  margin-top: 2px;
+  border-right: 1px #322C2C solid;
   color: red;
-  position: absolute;
-  top: 5%;
-  transform: translate(0%, -52.25%);
 }
 
 .DownCarrinho {
   width: 100%;
-  position: relative;
+  height: 8%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.DownCarrinho h2 {
-  left: 0;
-  transform: translate(10%, 20%);
+.DownCarrinho .TotalBox {
+  color: black;
+  border-radius: 10px;
+  height: 80%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
 }
 
 .DownCarrinho button {
+  margin-left: 20%;
+  color: black;
+  border-radius: 10px;
   font-weight: bold;
-  background: rgb(6, 185, 6);
+  background: white;
   font-size: larger;
-  height: 40px;
-  transform: translate(112.5%, -2.5%);
+  height: 80%;
 }
