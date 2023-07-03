@@ -2,6 +2,7 @@ import React from "react";
 import "./Bottom.css";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import { TiShoppingCart } from 'react-icons/ti';
 import { Cadastro, CarrinhoBox, ShowCarrinho } from './Utils';
 
 export const Bottom = () => {
@@ -53,7 +54,7 @@ export const Bottom = () => {
     <div className={`Carrinho ${carrinhoAtivo ? 'Active' : ''}`}>
         <button onClick={handleCarrinhoClick}>
           <span>
-            Carrinho
+          R$ {valorTotal.toFixed(2)} <TiShoppingCart size={'35px'} />Carrinho
           </span>
         </button>
         {Cadastro(nome,contato,setNome,setContato)}
