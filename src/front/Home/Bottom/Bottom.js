@@ -1,16 +1,20 @@
 import React from "react";
 import "./Bottom.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import { ShowCarrinho } from './Utils';
+import { TiShoppingCart } from 'react-icons/ti';
+import { Cadastro, CarrinhoBox } from './Utils';
 
 export const Bottom = () => {
 
+  const [nome, setNome] = useState('');
+  const [contato, setContato] = useState('');
   const [carrinho, setCarrinho] = useState([]);
   const valorTotal = carrinho.reduce((total, item) => {
     return total + parseFloat(item.valor) * parseInt(item.quantidade);
   }, parseFloat('0.00'));
   const [carrinhoAtivo, setCarrinhoAtivo] = useState(false);
+  const [continuarAtivo, setContinuarAtivo] = useState(false);
 
   const handleCarrinhoClick = () => {
     setCarrinhoAtivo(!carrinhoAtivo);
@@ -27,6 +31,25 @@ export const Bottom = () => {
     localStorage.setItem('carrinho', JSON.stringify(novoCarrinho));
   };
 
+  
+
+  const handleContinueClick = () => {
+    localStorage.setItem('nome', JSON.stringify(nome))
+    localStorage.setItem('contato', JSON.stringify(contato))
+    localStorage.setItem('valorTotal', JSON.stringify(valorTotal))
+  };
+
+  const validarBotaoContinuar = () => {
+    const carrinhoVazio = carrinho.length === 0;
+    const isNomeContatoVazios = nome.trim() === '' || contato.trim() === '';
+    const isBotaoAtivo = !carrinhoVazio && !isNomeContatoVazios;
+    setContinuarAtivo(isBotaoAtivo);
+  };
+
+  useEffect(() => {
+      validarBotaoContinuar(); // eslint-disable-next-line
+    }, [nome, contato, carrinho]);
+    
   return (
     <div className={`Carrinho ${carrinhoAtivo ? 'Active' : ''}`}>
         <button onClick={handleCarrinhoClick}>
@@ -34,24 +57,20 @@ export const Bottom = () => {
             Carrinho
           </span>
         </button>
-        <div className='Cadastro'>
-          <h1>
-            Nome
-            <input></input>
-          </h1>
-          <h1>
-            Número de Contato
-            <input></input>
-          </h1>
-        </div>
-        <div className='CarrinhoBox'>
-          {ShowCarrinho(carrinho,handleExcluirItem)}
-        </div>
+        {Cadastro(nome,contato,setNome,setContato)}
+        {CarrinhoBox(carrinho,handleExcluirItem)}
         <div className='DownCarrinho'>
-          <h2>Total: R$ {valorTotal.toFixed(2)}</h2>
-          <Link to="/pagamento">
-            <button>Continuar</button>
+          <div className="TotalBox">
+            <p>R$ {valorTotal.toFixed(2)}</p>
+            <TiShoppingCart className="IconCart" size={'35px'} />
+          </div>
+          {continuarAtivo ? (
+          <Link to="/pagamento" onClick={handleContinueClick}>
+            <button className="ButtonAitivado">Pagamento</button>
           </Link>
+          ) : (
+          <button disabled >Pagamento</button>
+          )}
         </div>
       </div>
   );
