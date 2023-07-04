@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import "./Bottom.css";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
@@ -39,16 +39,16 @@ export const Bottom = () => {
     localStorage.setItem('valorTotal', JSON.stringify(valorTotal))
   };
 
-  const validarBotaoContinuar = () => {
+  const validarBotaoContinuar = useCallback(() => {
     const carrinhoVazio = carrinho.length === 0;
     const isNomeContatoVazios = nome.trim() === '' || contato.trim() === '';
     const isBotaoAtivo = !carrinhoVazio && !isNomeContatoVazios;
     setContinuarAtivo(isBotaoAtivo);
-  };
+  }, [nome, contato, carrinho]);
 
   useEffect(() => {
       validarBotaoContinuar();
-    }, [nome, contato, carrinho]);
+    }, [validarBotaoContinuar]);
     
   return (
     <div className={`Carrinho ${carrinhoAtivo ? 'Active' : ''}`}>
