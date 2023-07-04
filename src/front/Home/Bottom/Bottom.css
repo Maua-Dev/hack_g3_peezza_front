@@ -87,15 +87,16 @@
 }
 
 .ItemCarrinho .Detalhes {
+  display: flex;
+  flex-direction: column;
   margin-top: 8%;
   margin-left: 10px;
   height: 100%;
-  max-width: 40%;
-  min-width: 40%;
+  max-width: 60%;
+  min-width: 60%;
 }
 
 .ItemCarrinho .Nome {
-  align-self: center;
   max-width: 100%;
   text-align: left;
   font-weight: bold;
@@ -104,8 +105,13 @@
   white-space: pre-wrap;
 }
 
+.ItemCarrinho .down {
+  display: flex;
+  margin-top: 15%;
+  width: 100%;
+}
+
 .ItemCarrinho .Valor {
-  text-align: left;
   font-family: "Roboto-Light", Helvetica;
   font-size: medium;
 }
@@ -114,11 +120,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 23%;
-  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 10);
-  height: 25%;
-  margin-left: 6%;
-  width: 15%;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 10);
+  height: auto;
+  margin-left: auto;
+  width: 50px;
   border-radius: 10px;
   bottom: 0;
 }
@@ -143,26 +148,38 @@
   height: 8%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .DownCarrinho .TotalBox {
   color: black;
+  margin-top: 1%;
   border-radius: 10px;
   height: 80%;
+  width: 45%;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: large;
+  font-size: larger;
 }
 
 .DownCarrinho button {
-  margin-left: 20%;
   color: black;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
+  height: 80%;
+  width: 50%;
   font-weight: bold;
   background: white;
-  font-size: larger;
+  font-size: xx-large;
+}
+
+.DownCarrinho .ButtonAitivado {
+  color: white;
+  background-color: green;
   height: 80%;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 10);
 }

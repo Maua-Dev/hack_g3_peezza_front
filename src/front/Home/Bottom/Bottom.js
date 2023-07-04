@@ -3,7 +3,7 @@ import "./Bottom.css";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { TiShoppingCart } from 'react-icons/ti';
-import { Cadastro, CarrinhoBox, ShowCarrinho } from './Utils';
+import { Cadastro, CarrinhoBox } from './Utils';
 
 export const Bottom = () => {
 
@@ -61,15 +61,15 @@ export const Bottom = () => {
         {CarrinhoBox(carrinho,handleExcluirItem)}
         <div className='DownCarrinho'>
           <div className="TotalBox">
-            <h2>R$ {valorTotal.toFixed(2)}</h2>
+            <p>R$ {valorTotal.toFixed(2)}</p>
             <TiShoppingCart className="IconCart" size={'35px'} />
           </div>
           {continuarAtivo ? (
           <Link to="/pagamento" onClick={handleContinueClick}>
-            <button>Continuar</button>
+            <button className="ButtonAitivado">Pagamento</button>
           </Link>
           ) : (
-          <button disabled>Continuar</button>
+          <button disabled >Pagamento</button>
           )}
         </div>
       </div>

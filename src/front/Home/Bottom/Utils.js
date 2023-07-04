@@ -15,11 +15,11 @@ export const Cadastro = (nome, contato, setNome, setContato) => {
   return (
     <div className='Cadastro'>
       <div class="form__group field">
-        <input type="input" class="form__field" placeholder="Nome" name={nome} id='name' required />
+        <input type="input" class="form__field" placeholder="Nome" name={nome} id='name' required onChange={handleNomeChange} />
         <label for="name" class="form__label">Nome</label>
       </div>
       <div class="form__group field">
-        <input type="input" class="form__field" placeholder="Número de Contato" name={contato} id='contato' required />
+        <input type="input" class="form__field" placeholder="Número de Contato" name={contato} id='contato' required onChange={handleContatoChange}/>
         <label for="contato" class="form__label">Número de Contato</label>
       </div>
     </div>
@@ -34,13 +34,15 @@ export const CarrinhoBox = (carrinho,handleExcluirItem) => {
         <img className="image" src={Item.imagem} alt={Item.nome}></img>
         <div className='Detalhes'>
           <header className='Nome'>{Item.nome}</header>
-          <label className='Valor'>R$ {Item.valor}</label>
-        </div>
-        <div className='DivQuantidade'>
-          <div className='Lixeira' onClick={() => handleExcluirItem(index)}>
-            <BsFillTrash3Fill size={'20px'} />
+          <div className="down">
+            <label className='Valor'>R$ {Item.valor}</label>
+            <div className='DivQuantidade'>
+              <div className='Lixeira' onClick={() => handleExcluirItem(index)}>
+              <BsFillTrash3Fill size={'20px'} />
+              </div>
+              <input className='Quantidade' value={Item.quantidade} readOnly></input>
+            </div>
           </div>
-          <input className='Quantidade' value={Item.quantidade} readOnly></input>
         </div>
       </div>
     ));
