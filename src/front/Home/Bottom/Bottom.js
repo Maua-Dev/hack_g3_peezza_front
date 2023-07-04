@@ -47,7 +47,7 @@ export const Bottom = () => {
   };
 
   useEffect(() => {
-      validarBotaoContinuar(); // eslint-disable-next-line
+      validarBotaoContinuar();
     }, [nome, contato, carrinho]);
     
   return (
