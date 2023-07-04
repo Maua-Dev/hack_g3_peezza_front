@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Options.css";
-import { Link } from "react-router-dom";
 import pixImg from "./pix.png";
 import cartaocredImg from "./cartaocred.png";
 import cartaodebImg from "./cartaodeb.png";
