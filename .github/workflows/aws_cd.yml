@@ -14,11 +14,11 @@ jobs:
       id-token: write
       contents: read
     steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v3
         - name: Setup AWS Credentials
-          uses: aws-actions/configure-aws-credentials@v3
+          uses: aws-actions/configure-aws-credentials@v2
           with:
-            aws-region: sa-east-1
+            aws-region: us-east-1
             role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/GithubActionsRole
             role-session-name: github-action
         - name: Use Node.js 18.x
