@@ -1,0 +1,97 @@
+.Login {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: wheat;
+}
+
+.LoginBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60vh;
+    height: 60vh;
+    background-color: #322C2C;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px #00000040;
+    }
+    
+    .TopBox {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 90%;
+        color: #322C2C;
+        height: 20%;
+        border-bottom: solid white 1px;
+        }
+
+        .titleBox {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            text-align: center;
+            height: 70%;
+            font-family: "Roboto-Light", Helvetica;
+            font-size: x-large;
+            width: fit-content;
+            border-radius: 10px;
+            background-color: white;
+
+        }
+        
+        .diferentColor {
+            color: #ffa740;
+        }
+    
+    .MidBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        color: #322C2C;
+        height: 65%;
+        border-bottom: solid white 1px;
+        font-family: "Roboto-Light", Helvetica;
+        font-weight: bold;
+        }
+        
+        .Input {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            width: 100%;
+            height: 50%;
+            padding-top: 5%;
+        }
+
+        .Input label {
+            display: flex;
+            font-size: 50px;
+            text-align: start;
+        }
+
+        .Input .showPassword {
+            width: fit-content;
+            position: relative;
+            top: -40%;
+            right: 0;
+            left: 95%;
+            background-color: black;
+            font-size: 20px;
+            text-align: start;
+        }
+
+        .Input input {
+            text-align: ;
+            font-size: larger;
+            border-radius: 10px;
+            border: 0;
+            height: 40%;
+            width: 100%;
+        }
+
+        
+
