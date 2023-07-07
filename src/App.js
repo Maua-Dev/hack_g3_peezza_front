@@ -8,7 +8,7 @@ export default function App() {
   return (
     <Routes>
       <Route element={<Login />} path='/admin' exact />
-      <Route element={<Home />} path="/cardapio" />
+      <Route element={<Home />} path="/" />
       <Route element={<Payment />} path="/pagamento" />
     </Routes>
   );
