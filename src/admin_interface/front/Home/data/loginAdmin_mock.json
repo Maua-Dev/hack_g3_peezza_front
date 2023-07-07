@@ -1,0 +1,9 @@
+{
+    "login": [
+    { "nome":"Felipe",
+      "username":"Teste",
+      "password":"Teste2023",
+      "cargo":"Administrador"
+    }
+  ]
+}

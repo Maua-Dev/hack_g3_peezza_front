@@ -6,20 +6,22 @@ export const Cadastro = (nome, contato, setNome, setContato) => {
 
   const handleNomeChange = (event) => {
     setNome(event.target.value);
+    localStorage.setItem('nome', JSON.stringify(event.target.value))
   };
 
   const handleContatoChange = (event) => {
     setContato(event.target.value);
+    localStorage.setItem('contato', JSON.stringify(event.target.value))
   };
 
   return (
     <div className='Cadastro'>
       <div class="form__group field">
-        <input type="input" class="form__field" placeholder="Nome" name={nome} id='name' required onChange={handleNomeChange} />
+        <input type="input" class="form__field" placeholder="Nome" name={nome} value={nome} id='name' required onChange={handleNomeChange} />
         <label for="name" class="form__label">Nome</label>
       </div>
       <div class="form__group field">
-        <input type="input" class="form__field" placeholder="Número de Contato" name={contato} id='contato' required onChange={handleContatoChange}/>
+        <input type="input" class="form__field" placeholder="Número de Contato" name={contato} value={contato} id='contato' required onChange={handleContatoChange}/>
         <label for="contato" class="form__label">Número de Contato</label>
       </div>
     </div>
