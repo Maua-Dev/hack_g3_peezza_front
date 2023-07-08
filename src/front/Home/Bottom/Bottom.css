@@ -23,7 +23,7 @@
 .Carrinho button {
   position: relative;
   margin-top: 5px;
-  color: whitenp;
+  color: #f5f5f5;
   border: none;
   background: none;
   border-radius: 4px;
@@ -157,6 +157,7 @@
   border-radius: 10px;
   height: 80%;
   width: 45%;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;

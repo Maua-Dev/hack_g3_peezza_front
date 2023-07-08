@@ -9,9 +9,7 @@ export const Mid = () => {
         <BackButton></BackButton>
         <div className="box">
           <h1>Métodos de Pagamento:</h1>
-          <div className="options-container">
-            <Options />
-          </div>
+          <Options />
         </div>
       </div>
     );
