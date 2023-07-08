@@ -19,16 +19,8 @@ export const Bottom = () => {
   const handleCarrinhoClick = () => {
     setCarrinhoAtivo(!carrinhoAtivo);
     const carrinhoSalvo = localStorage.getItem('carrinho');
-    const nomeSalvo = localStorage.getItem('nome');
-    const contatoSalvo = localStorage.getItem('contato');
     if (carrinhoSalvo) {
       setCarrinho(JSON.parse(carrinhoSalvo));
-    }
-    if (nomeSalvo) {
-      setNome(JSON.parse(nomeSalvo));
-    }
-    if (contatoSalvo) {
-      setContato(JSON.parse(contatoSalvo));
     }
   };
 
@@ -39,7 +31,11 @@ export const Bottom = () => {
     localStorage.setItem('carrinho', JSON.stringify(novoCarrinho));
   };
 
+  
+
   const handleContinueClick = () => {
+    localStorage.setItem('nome', JSON.stringify(nome))
+    localStorage.setItem('contato', JSON.stringify(contato))
     localStorage.setItem('valorTotal', JSON.stringify(valorTotal))
   };
 
