@@ -17,7 +17,7 @@ export const Options = () => {
         className={`Option ${selectedOption === "pix" ? "selected" : ""}`}
         onClick={() => handleOptionClick("pix")}
       >
-        <div className="ButtonContainer">
+        <div className="Pix">
           <img src={pixImg} alt="Pix" />
           <div className="Description">Pix</div>
         </div>

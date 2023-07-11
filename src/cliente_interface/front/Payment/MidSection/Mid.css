@@ -6,13 +6,7 @@
     align-items: center;
   }
 
-  .mid .box {
-    overflow-y: scroll;
-  }
-
-  .options-container
-
-  .mid .box h1 {
+.box h1 {
     margin-top: 20%;
     color: white;
     font-size: xx-large;
