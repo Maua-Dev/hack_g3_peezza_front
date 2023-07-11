@@ -17,11 +17,11 @@ export const Cadastro = (nome, contato, setNome, setContato) => {
   return (
     <div className='Cadastro'>
       <div class="form__group field">
-        <input type="input" class="form__field" placeholder="Nome" name={nome} value={nome} id='name' required onChange={handleNomeChange} />
+        <input type="text" class="form__field" placeholder="Nome" name={nome} value={nome} id='name' required onChange={handleNomeChange} />
         <label for="name" class="form__label">Nome</label>
       </div>
       <div class="form__group field">
-        <input type="input" class="form__field" placeholder="Número de Contato" name={contato} value={contato} id='contato' required onChange={handleContatoChange}/>
+        <input type="numeric" class="form__field" placeholder="Número de Contato" name={contato} value={contato} id='contato' required onChange={handleContatoChange}/>
         <label for="contato" class="form__label">Número de Contato</label>
       </div>
     </div>
