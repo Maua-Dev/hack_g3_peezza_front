@@ -12,7 +12,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/admin/*" element={<RoutesAdmin />} />
-        <Route path='/client/*' element={<RoutesClient />}/>
+        <Route path='/*' element={<RoutesClient />}/>
       </Routes>
     </Router>
   );

@@ -6,7 +6,7 @@ import Payment from './front/Payment/Payment';
 export default function RoutesClient() {
   return (
     <Routes>
-      <Route path="/cardapio" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/pagamento" element={<Payment />} />
     </Routes>
   );
