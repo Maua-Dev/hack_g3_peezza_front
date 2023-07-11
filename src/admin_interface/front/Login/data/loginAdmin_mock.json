@@ -1,9 +1,15 @@
 {
     "login": [
-    { "nome":"Felipe",
+    { "id":"1000",
+      "nome":"Felipe",
       "username":"Teste",
       "password":"Teste2023",
-      "cargo":"Administrador"
-    }
+      "cargo":"administrador"
+    },
+    { "id":"1001",
+      "nome":"Rogerio",
+      "username":"Pizzaiolo",
+      "password":"Pizzaiolo2023",
+      "cargo":"pizzaiolo"}
   ]
 }
