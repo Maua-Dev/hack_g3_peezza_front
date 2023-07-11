@@ -1,7 +1,7 @@
 import React from "react";
 import "./Bottom.css";
 import { IoWalletOutline } from "react-icons/io5";
-
+import { PayButtom } from "./PayButtom/PayButtom";
 
 const valorTotal = localStorage.getItem('valorTotal');
 export const Bottom = () => {
@@ -10,7 +10,7 @@ export const Bottom = () => {
       <div className="Pagar">
         <h2>R${valorTotal}</h2>
         <h3><IoWalletOutline/></h3>
-        <button className="PayButton">Pagar</button>
+        <PayButtom></PayButtom>
       </div>
     </div>
   );
