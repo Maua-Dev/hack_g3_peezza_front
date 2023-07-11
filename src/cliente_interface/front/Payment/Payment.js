@@ -1,8 +1,8 @@
 import React from 'react';
 import './Payment.css';
 import { Top } from './Top/Top';
-import { Mid } from './MidSection/Mid';
-import { Bottom } from './Bottom/Bottom';
+import { Mid } from './MidSection/MidPayment';
+import { Bottom } from './Bottom/BottomPayment';
 
 function Payment() {
     return(

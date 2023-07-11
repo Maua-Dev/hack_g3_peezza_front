@@ -1,9 +1,11 @@
 import React from "react";
-import "./Bottom.css";
+import "./BottomPayment.css";
 import { IoWalletOutline } from "react-icons/io5";
 import { PayButtom } from "./PayButtom/PayButtom";
 
-const valorTotal = localStorage.getItem('valorTotal');
+
+const valorTotal = parseFloat(localStorage.getItem('valorTotal')).toFixed(2);
+
 export const Bottom = () => {
   return (
     <div className="Bottom">

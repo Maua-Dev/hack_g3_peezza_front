@@ -1,8 +1,8 @@
 import React from 'react';
 import './Retirada.css';
 import { Top } from './Top/Top';
-import { Bottom } from './Bottom/Bottom';
-import { Mid } from './MidSection/Mid';
+import { Bottom } from './Bottom/BottomRetirada';
+import { Mid } from './MidSection/MidRetirada';
 
 
 function Retirada() {
