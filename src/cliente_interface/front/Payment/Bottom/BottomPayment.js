@@ -1,7 +1,7 @@
 import React from "react";
 import "./BottomPayment.css";
 import { IoWalletOutline } from "react-icons/io5";
-import { PayButtom } from "./PayButtom/PayButtom";
+import { PayButton } from "./PayButton/PayButton";
 
 
 const valorTotal = parseFloat(localStorage.getItem('valorTotal')).toFixed(2);
@@ -12,7 +12,7 @@ export const Bottom = () => {
       <div className="Pagar">
         <h2>R${valorTotal}</h2>
         <h3><IoWalletOutline/></h3>
-        <PayButtom></PayButtom>
+        <PayButton></PayButton>
       </div>
     </div>
   );
