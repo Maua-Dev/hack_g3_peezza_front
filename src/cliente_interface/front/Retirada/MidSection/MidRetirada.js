@@ -1,13 +1,13 @@
 import React from "react";
 import './MidRetirada.css';
-import { BackToPayment } from "./BackToPayment/BackToPayment";
 import gifImage from './Loading.gif';
 
-const nome = localStorage.getItem('nome');
 export const Mid = () => {
+  
+  const nome = localStorage.getItem('nome');
+
   return (
     <div className="mid_p">
-      <BackToPayment /> 
       <div className="pedido">
         <h1>{nome} seu pedido foi enviado:</h1>
       </div>
@@ -16,7 +16,6 @@ export const Mid = () => {
         <div className="status">
           <span>Status:</span>
         </div>
-        <div className="line"></div>
           <span className="centered">[Status]</span>       
       </div>
     </div>

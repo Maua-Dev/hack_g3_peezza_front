@@ -1,45 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Options.css";
-import pixImg from "./pix.png";
-import cartaocredImg from "./cartaocred.png";
-import cartaodebImg from "./cartaodeb.png";
+import pix from "./pix.png";
+import cartaocredito from "./cartaocred.png";
+import cartaodebito from "./cartaodeb.png";
 
-export const Options = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+export const Options = ({ setContinues, selectedOption, setSelectedOption }) => {
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
   };
 
+  useEffect(() => {
+    if (selectedOption) {
+      setContinues(true);
+    }
+  }, [selectedOption, setContinues]);
+
+  function renderOption(Option, NameOption, img) {
+    return (
+      <div
+        className={`Option ${selectedOption === Option ? "selected shine-green" : ""}`}
+        onClick={() => handleOptionClick(Option)}
+      >
+        <div className={Option}>
+          <img src={img} alt={"Imagem " + NameOption} />
+          <div className="Description">{NameOption}</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="Options">
-      <div
-        className={`Option ${selectedOption === "pix" ? "selected" : ""}`}
-        onClick={() => handleOptionClick("pix")}
-      >
-        <div className="Pix">
-          <img src={pixImg} alt="Pix" />
-          <div className="Description">Pix</div>
-        </div>
-      </div>
-      <div
-        className={`Option ${selectedOption === "cartaocredito" ? "selected" : ""}`}
-        onClick={() => handleOptionClick("cartaocredito")}
-      >
-        <div className="ButtonContainer">
-          <img src={cartaocredImg} alt="Cartão de Crédito" />
-          <div className="Description">Cartão de Crédito</div>
-        </div>
-      </div>
-      <div
-        className={`Option ${selectedOption === "cartaodebito" ? "selected" : ""}`}
-        onClick={() => handleOptionClick("cartaodebito")}
-      >
-        <div className="ButtonContainer">
-          <img src={cartaodebImg} alt="Cartão de Débito" />
-          <div className="Description">Cartão de Débito</div>
-        </div>
-      </div>
-    </div>
+    <>
+      {renderOption("pix","Pix",pix)}
+      {renderOption("cartaocredito","Cartão de Crédito",cartaocredito)}
+      {renderOption("cartaodebito","Cartão de Débito",cartaodebito)}
+    </>
   );
 };

@@ -1,10 +1,12 @@
 import React from "react";
 import './Top.css';
 
-export const Top = () => {
+export function Top () {
   return (
     <div className="Top">
-      <header>Pizze du Soleil</header>
+      <div className="TopBox">
+        <header>Pizze du Soleil</header>
+      </div>
     </div>
-  );
-};
+  )
+}

@@ -5,16 +5,11 @@ import { Bottom } from './Bottom/BottomRetirada';
 import { Mid } from './MidSection/MidRetirada';
 
 
-function Retirada() {
+export default function Retirada() {
     return(
-      <div className='App'>
+      <div className='Retirada'>
         <Top></Top>
         <Mid></Mid>
-        <Bottom></Bottom>
       </div>
-      // <Link to="/">
-      //   <button>Olá</button>  
-      // </Link>
     );
 }
-export default Retirada;
