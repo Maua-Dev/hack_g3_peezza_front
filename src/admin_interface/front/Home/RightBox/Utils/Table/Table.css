@@ -1,0 +1,32 @@
+.TableBox {
+  overflow-x: auto;
+  width: 98%;
+  margin-left: 1%;
+}
+
+.Table {
+  overflow-x: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  width: 100%;
+  overflow-y: auto;
+  margin-bottom: 1%;
+  }
+
+  .Table th {
+    font-weight: bold;
+    width: fit-content;
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(19, 93, 177);
+  }
+
+  .Table td {
+    font-weight: bold;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: rgb(241, 241, 241);
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+  }
