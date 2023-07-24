@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './Pizzaiolo.css';
-import { fetchData } from './Data/repo_mock';
+import { fetchData } from './data/repo_mock';
 import TopScreen from './Top/Top';
 import MidScreen from './Mid/Mid';
 import BottomScreen from './Bottom/Bottom';
