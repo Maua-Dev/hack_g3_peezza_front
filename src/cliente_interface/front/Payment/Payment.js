@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Payment.css';
 import { Top } from './Top/Top';
-import { Mid } from './MidSection/Mid';
-import { Bottom } from './Bottom/Bottom';
+import { Mid } from './MidSection/MidPayment';
+import { Bottom } from './Bottom/BottomPayment';
 
 function Payment() {
-    return(
-      <div className='App'>
-        <Top></Top>
-        <Mid></Mid>
-        <Bottom></Bottom>
-      </div>
-      // <Link to="/">
-      //   <button>Olá</button>  
-      // </Link>
-    );
+
+  const [continues, setContinues] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  return (
+    <div className='App'>
+      <Top></Top>
+      <Mid setContinues={setContinues} selectedOption={selectedOption} setSelectedOption={setSelectedOption}></Mid>
+      <Bottom continues={continues} selectedOption={selectedOption} ></Bottom>
+    </div>
+  );
 }
 export default Payment;

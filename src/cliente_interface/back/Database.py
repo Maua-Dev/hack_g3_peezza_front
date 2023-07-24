@@ -3,10 +3,9 @@ from mysql.connector import Error
 
 class DataBase():
     def __init__(self):
-        self.host = "database-1.cprbhtxuedqd.us-east-1.rds.amazonaws.com"
-        self.port = 3306
-        self.user = "admin"
-        self.password = "Felipesql134679-"
+        self.host = "localhost"
+        self.user = "root"
+        self.password = "Felipe134679"
         self.database = "dbpizzedusoleil"
         
 class Connection(DataBase):
@@ -15,7 +14,6 @@ class Connection(DataBase):
         try:
             self.connection = connect(
                 host=self.host,
-                port = self.port,
                 user=self.user,
                 passwd=self.password,
                 database=self.database
@@ -23,7 +21,7 @@ class Connection(DataBase):
             self.cursor = self.connection.cursor()
 
         except Error as e:
-            print(f"Erro ao conectar ao banco de dados: {e}")
+            return { e }
 
     def get_Cursor(self):
         return self.cursor
@@ -31,4 +29,6 @@ class Connection(DataBase):
     def close_Connection(self):
         self.connection.close()
 
+    def commit(self):
+        self.connection.commit()
 

@@ -1,0 +1,51 @@
+.mid_p {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+  background-color: #2C2C2C;
+  align-items: center;
+  }
+
+  .pedido h1 {
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+  }
+
+  .mid_p img {
+    width: 310px;
+    height: 310px;
+    margin-top: -10%;
+  }
+
+  .status {
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .status span {
+    color: white;
+    font-size: 38px;
+    font-family: "Roboto-Regular", Helvetica;
+    margin-left: -12%;
+  }
+
+  .centered {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: "Roboto-Regular", Helvetica;
+  }
+
+  .line {
+    width: 136%;
+    height: 1px;
+    background-color: white;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-left: -20%;
+  }
+
