@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import { fetchData } from "./data/repo_mock";
 
 export default function Login() {
 
+  const navigate = useNavigate();
   const [showPassword, setClickedShow] = useState(false);
 
   const handleShowPassword = () => {
@@ -17,10 +19,14 @@ export default function Login() {
     }
   };
 
-  const handleLogin = (username, password) => {
+  const handleLogin = (idUser, password) => {
+
     const accounts = fetchData();
-    const existingUser = accounts.find((account) => account.username === username && account.password === password) ? (true) : (false);
-    console.log(existingUser);
+    const existingUser = accounts.find((account) => account.id === idUser && account.password === password);
+
+    if (existingUser) {
+      navigate('/admin/'+existingUser.cargo);
+    }
   };
 
   return(
@@ -36,7 +42,7 @@ export default function Login() {
         <div className='MidBox'>
           <div className='Input1'>
             <label>Usuario:</label>
-            <input type='text' id='username'></input>
+            <input type='numeric' id='idUser'></input>
           </div>
           <div className='Input2'>
             <label>Senha:</label>
@@ -49,7 +55,7 @@ export default function Login() {
           </div>
         </div>
         <div className='BottomBox'>
-          <button onClick={() => handleLogin(document.getElementById('username').value, document.getElementById('password').value)}>LOGIN</button>
+          <button type='submit' onClick={() => handleLogin(document.getElementById('idUser').value, document.getElementById('password').value)}>LOGIN</button>
         </div>
       </div>
     </div>

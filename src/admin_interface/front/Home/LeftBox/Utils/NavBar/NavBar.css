@@ -1,0 +1,79 @@
+.NavOptions {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 10%;
+  transition: background-color 0.3s ease
+  }
+
+  .NavOptions:hover {
+    background-color: rgb(19, 93, 177);
+  }
+
+  .NavOptions .tittle {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 50%;
+    height: 100%;
+    transition: transform 0.5s ease;
+    }
+
+    .NavOptions:hover .tittle {
+      transform: translateX(100%);
+    }
+
+    .NavOptions .tittle #icon {
+        padding-left: 15%;
+        font-size: larger;
+    }
+
+    .NavOptions .tittle #name {
+        padding-left: 3%;
+        padding-right: 5%;
+    }
+  
+.NavTables {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: 100%;
+  height: 10%;
+  transition: background-color 0.3s ease
+  }
+
+  .NavTables:hover {
+    background-color: rgb(19, 93, 177);
+  }
+
+  .NavTables .tittle {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 50%;
+    height: 100%;
+    transition: transform 0.5s ease;
+    }
+
+    .NavTables:hover .tittle {
+      transform: translateX(100%);
+    }
+
+    .NavTables .tittle #icon {
+      padding-left: 15%;
+      font-size: larger;
+    }
+
+    .NavTables .tittle #name {
+      padding-left: 3%;
+      padding-right: 5%;
+    }
+
+    .NavTables #arrow {
+      margin-right: 5%;
+      transition: transform 0.2s ease;
+      }
