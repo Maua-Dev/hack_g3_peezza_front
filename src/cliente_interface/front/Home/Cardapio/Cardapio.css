@@ -23,9 +23,9 @@
   }
 
   .Itens-Show{
-    left: -3%;
+    left: -4%;
     position: relative;
-    width: 106%;
+    width: 108%;
     margin-top: 12.5px;
     display: flex;
     overflow-x: scroll;

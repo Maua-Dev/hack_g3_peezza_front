@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Cardapio.css";
 // Home - Gera nova tupla de itens Cardapio
 
 export const createNewCtgr = (Tittle,category, handleItemClick, clickedItem) => {
@@ -7,7 +7,7 @@ export const createNewCtgr = (Tittle,category, handleItemClick, clickedItem) => 
     <div className="box">
         <div className="cabecalho">
           <h1 className="text-h1">{Tittle}</h1>
-          <div className="Line" />
+          <div className="line" />
         </div>
         <div className='Itens-Show'>
           {showItens(category, handleItemClick, clickedItem)}
