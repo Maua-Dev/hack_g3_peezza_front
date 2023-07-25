@@ -15,6 +15,7 @@ export const Mid = () => {
         <img src={gifImage} alt="Loading..." />
         <div className="status">
           <span>Status:</span>
+          <div className="line"></div>
         </div>
           <span className="centered">[Status]</span>       
       </div>

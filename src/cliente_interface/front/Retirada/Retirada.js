@@ -10,6 +10,7 @@ export default function Retirada() {
       <div className='Retirada'>
         <Top></Top>
         <Mid></Mid>
+        <Bottom></Bottom>
       </div>
     );
 }
