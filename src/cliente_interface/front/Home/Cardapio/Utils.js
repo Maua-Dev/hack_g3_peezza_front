@@ -1,5 +1,4 @@
 import React from "react";
-import "./Utils.css";
 
 // Home - Gera nova tupla de itens Cardapio
 

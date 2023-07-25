@@ -14,7 +14,7 @@
       opacity: 0.9;
     }
 
-    .ItemBoxSlctd.box {
+    .ItemBoxSlctd .box {
       display: flex;
       flex-direction: column;
       width: 70%;
