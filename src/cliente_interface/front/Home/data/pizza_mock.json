@@ -12,14 +12,13 @@
       "nome": "Pizza Pepperoni",
       "descricao": "Molho de tomate, mussarela e pepperoni.",
       "valor": 32.99,
-      "imagem": "https://i.pinimg.com/564x/fb/10/51/fb1051f25ba5947e114aaa72261c9b2a.jpg"
+      "imagem": "https://i.pinimg.com/564x/47/b0/c7/47b0c716f1ef964a2bc56c0c9c698c59.jpg"
     },
     {
       "id": 56,
       "nome": "Pizza Calabresa",
       "descricao": "Molho de tomate, mussarela, calabresa e cebola.",
-      "valor": 31.99,
-      "imagem": "https://i.pinimg.com/564x/47/b0/c7/47b0c716f1ef964a2bc56c0c9c698c59.jpg"
+      "imagem": "https://i.pinimg.com/564x/00/59/da/0059dab222adf64db29f2a5428cfaf6f.jpg"
     },
     {
       "id": 57,
@@ -47,63 +46,63 @@
       "nome": "Pizza Margherita Especial",
       "descricao": "Molho de tomate, mussarela, tomate, manjericão fresco e azeitonas pretas.",
       "valor": 30.99,
-      "imagem": "7"
+      "imagem": "https://i.pinimg.com/564x/64/0c/05/640c057a5445651f405d21f3052efa2a.jpg"
     },
     {
       "id": 61,
       "nome": "Pizza Vegetariana",
       "descricao": "Molho de tomate, mussarela, palmito, champignon, milho, ervilha e cebola.",
       "valor": 32.99,
-      "imagem": "8"
+      "imagem": "https://i.pinimg.com/564x/f5/58/e7/f558e7115989aa0f9e5a7b18bff3c514.jpg"
     },
     {
       "id": 62,
       "nome": "Pizza Mexicana",
       "descricao": "Molho de tomate, mussarela, carne moída, pimenta jalapeño e nachos.",
       "valor": 36.99,
-      "imagem": "9"
+      "imagem": "https://i.pinimg.com/564x/05/62/de/0562de6de5913ede00990cbb4a4c666b.jpg"
     },
     {
       "id": 63,
       "nome": "Pizza Quatro Estações",
       "descricao": "Molho de tomate, mussarela, presunto, champignon, palmito e azeitonas.",
       "valor": 33.99,
-      "imagem": "10"
+      "imagem": "https://img.freepik.com/fotos-premium/pizza-saborosa-das-quatro-estacoes-fresca-isolada-no-fundo-branco_136401-4229.jpg?w=2000"
     },
     {
       "id": 64,
       "nome": "Pizza Bacon com Milho",
       "descricao": "Molho de tomate, mussarela, bacon, milho e catupiry.",
       "valor": 34.99,
-      "imagem": "11"
+      "imagem": "https://querouai.com.br/gestao/img/produtos/11_671_20220912150654.jpeg"
     },
     {
       "id": 65,
-      "nome": "Pizza Margherita com Rúcula",
-      "descricao": "Molho de tomate, mussarela, tomate, manjericão fresco e rúcula.",
+      "nome": "Pizza 3 queijos com salsichão",
+      "descricao": "Molho de tomate, mussarela, parmesão, catupiry e salsichão.",
       "valor": 31.99,
-      "imagem": "12"
+      "imagem": "https://i.pinimg.com/564x/63/f0/ec/63f0ecab13cee5e09829e537affabacd.jpg"
     },
     {
       "id": 66,
       "nome": "Pizza Napolitana",
       "descricao": "Molho de tomate, mussarela, tomate, alho e manjericão fresco.",
       "valor": 29.99,
-      "imagem": "13"
+      "imagem": "https://i.pinimg.com/564x/92/ad/03/92ad03ae1fcbc8bc94c3cc7570e0dbc6.jpg"
     },
     {
       "id": 67,
       "nome": "Pizza Carne Seca com Catupiry",
       "descricao": "Molho de tomate, mussarela, carne seca desfiada e catupiry.",
       "valor": 37.99,
-      "imagem": "14"
+      "imagem": "https://media-cdn.tripadvisor.com/media/photo-s/09/46/f4/f7/vittore.jpg"
     },
     {
       "id": 68,
-      "nome": "Pizza Atum",
-      "descricao": "Molho de tomate, mussarela, atum, cebola e azeitonas.",
+      "nome": "Pizza Atum com Cream Cheese",
+      "descricao": "Molho de tomate, mussarela, atum, cream cheese e alho poró.",
       "valor": 32.99,
-      "imagem": "15"
+      "imagem": "https://i.pinimg.com/564x/42/82/51/428251cff65ea00514861ae30762c95a.jpg"
     }
   ]
 }
