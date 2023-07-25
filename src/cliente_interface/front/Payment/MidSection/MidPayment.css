@@ -11,7 +11,7 @@
     color: rgb(255, 255, 255);
     font-size: xx-large;
     padding-bottom: 5%;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
     }
 
     .options-container {
@@ -19,6 +19,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      overflow-y: scroll;
+      overflow-y: auto;
       max-height: 70%;
     }
