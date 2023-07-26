@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './Table.css';
-import axios from 'axios';
+import { fetchData, createItem, updateItemById } from '../../../../../../back_operation_mock/repo_mock';
 
-export default function Table ({selectedOption}) {
-  
+export default function Table({ selectedOption }) {
+
   const [tableAtributes, setTableAtributes] = useState([]);
   const [tableData, setTableData] = useState([]);
+
+  const [showAddOption, setShowAddOption] = useState(false);
 
   useEffect(() => {
     handleResquestTable();
@@ -13,9 +15,9 @@ export default function Table ({selectedOption}) {
 
   async function handleResquestTable() {
     try {
-      const response = await axios.post('http://localhost:8000/api/get-Table', { request : selectedOption });
-      setTableAtributes(response.data.atributes)
-      setTableData(response.data.tuples)
+      const response = fetchData(selectedOption);
+      setTableAtributes(response.attributes)
+      setTableData(response.tuples)
     } catch (error) {
       console.error('Erro ao enviar mensagem:', error);
     }
@@ -30,7 +32,7 @@ export default function Table ({selectedOption}) {
           ))}
         </tr>
       </thead>
-      
+
     );
   }
 
@@ -47,14 +49,23 @@ export default function Table ({selectedOption}) {
       </tbody>
     );
   }
-  
+
+  function renderAddOption() {
+    return (
+      <div className='TableInputOptions'> 
+        
+      </div>
+    );
+  }
   return (
     <>
-      <div className='TableOptions'>
-        <button>ADICIONAR</button> 
-        <button>ADICIONAR</button> 
-        <button>ADICIONAR</button> 
-        <button>ADICIONAR</button> 
+      <div className={`TableTopContainer ${!showAddOption && "hidden"}`}>
+        <div className='TableOptions'>
+          <button onClick={() => setShowAddOption(!showAddOption)}>ADICIONAR</button>
+          <button>DELETAR</button>
+          <button>ALTERAR</button>
+        </div>
+        {showAddOption && renderAddOption()}
       </div>
       <div className='TableBox'>
         <table className='Table'>
