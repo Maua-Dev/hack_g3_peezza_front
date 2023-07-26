@@ -1,20 +1,13 @@
 import React from "react";
 import "./BottomRetirada.css";
-
-
-
+import { Link } from "react-router-dom";
 
 export const Bottom = () => {
   return (
     <div className="Bottom">
-      <div className="customCheckBoxHolder">
-      <input type="checkbox" id="cCB1" className="customCheckBoxInput" />
-      <label htmlFor="cCB1" className="customCheckBoxWrapper">
-        <div className="customCheckBox">
-          <div className="inner">Confirme a retirada</div>
-        </div>
-      </label>
-    </div>
+      <Link to={"/client/feedback/"} className= 'Link'>
+      <button className="ConfirmButton">Confirme a retirada</button>
+      </Link>
     </div>
   );
 };
