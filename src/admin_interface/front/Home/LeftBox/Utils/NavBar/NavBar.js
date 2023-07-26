@@ -41,6 +41,5 @@ export function NavBar({ Icon, Name, setSelectedOption }) {
         </div>
       </div>
     </>
-
   );
 }
