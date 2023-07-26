@@ -69,7 +69,7 @@ export const Bottom = () => {
             <TiShoppingCart className="IconCart" size={'35px'} />
           </div>
           {continuarAtivo ? (
-          <Link to="/pagamento" onClick={handleContinueClick}>
+          <Link to="pagamento/" onClick={handleContinueClick}>
             <button className="ButtonAitivado">Pagamento</button>
           </Link>
           ) : (

@@ -22,7 +22,7 @@ export const PayButton = ({ continues, selectedOption }) => {
   };
 
   return (
-    <Link to={"/retirada"} className="Link">
+    <Link to={"/client/retirada/"} className="Link">
       <button className="Button" disabled={!continues} onClick={saveOrder}>
         Pagar
       </button>
