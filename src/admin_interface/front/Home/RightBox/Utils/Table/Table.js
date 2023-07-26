@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Table.css';
-import { fetchData, createItem, updateItemById } from '../../../../../../back_operation_mock/repo_mock';
+import { fetchData } from '../../../../../../back_operation_mock/repo_mock';
 
 export default function Table({ selectedOption }) {
 
@@ -10,18 +10,18 @@ export default function Table({ selectedOption }) {
   const [showAddOption, setShowAddOption] = useState(false);
 
   useEffect(() => {
-    handleResquestTable();
+    const fetchDataAndUpdateTable = async () => {
+      try {
+        const response = fetchData(selectedOption);
+        setTableAtributes(response.attributes);
+        setTableData(response.tuples);
+      } catch (error) {
+        console.error('Erro ao enviar mensagem:', error);
+      }
+    };
+  
+    fetchDataAndUpdateTable();
   }, [selectedOption]);
-
-  async function handleResquestTable() {
-    try {
-      const response = fetchData(selectedOption);
-      setTableAtributes(response.attributes)
-      setTableData(response.tuples)
-    } catch (error) {
-      console.error('Erro ao enviar mensagem:', error);
-    }
-  }
 
   function renderTableAtributes() {
     return (

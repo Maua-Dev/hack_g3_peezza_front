@@ -8,7 +8,7 @@ import ConfirmScreen from './ConfirmScreen/Confirm';
 
 export default function Pizzaiolo() {
 
-  const [team, setTeam] = useState([{ 'nome': 'Felipe' }, { 'nome': 'Carlos' }]);
+  const [team] = useState([{ 'nome': 'Felipe' }, { 'nome': 'Carlos' }]);
   const [orders, setOrders] = useState([]);
   const [isScreenOpen, setIsScreenOpen] = useState(false);
   const useInput = useRef(null);

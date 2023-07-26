@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Options.css";
 import pix from "./pix.png";
 import cartaocredito from "./cartaocred.png";

@@ -1,7 +1,6 @@
 import React from "react";
 import './PayButton.css';
 import { Link } from "react-router-dom";
-import { fetchData, createItem } from "../../../../../back_operation_mock/repo_mock";
 
 export const PayButton = ({ continues, selectedOption }) => {
 
@@ -19,7 +18,6 @@ export const PayButton = ({ continues, selectedOption }) => {
     };
 
     console.log(order)
-
 
   };
 

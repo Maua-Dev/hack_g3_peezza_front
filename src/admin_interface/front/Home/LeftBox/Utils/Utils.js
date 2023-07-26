@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import './Utils.css';
 import { NavBar } from "./NavBar/NavBar";
 import { BsTable } from "react-icons/bs";
 
 export function LeftBox({ UserName, setSelectedOption }) {
-
-  const NavBarOption = useState([{ Name: 'Tables', Icon: BsTable, link: "/" }])
 
   return (
     <div className="LeftBox">
