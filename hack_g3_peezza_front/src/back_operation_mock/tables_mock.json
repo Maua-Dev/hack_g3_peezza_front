@@ -1,0 +1,272 @@
+{
+  "Cardapio": [
+    [
+      "ID Item",
+      "Item",
+      "Descrição",
+      "Preço",
+      "Categoria"
+    ],
+    {
+      "ID Item": 54,
+      "Item": "Pizza Margherita",
+      "Descrição": "Molho de tomate, mussarela, tomate e manjericão fresco.",
+      "Preço": "R$ 29.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 55,
+      "Item": "Pizza Pepperoni",
+      "Descrição": "Molho de tomate, mussarela e pepperoni.",
+      "Preço": "R$ 32.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 56,
+      "Item": "Pizza Calabresa",
+      "Descrição": "Molho de tomate, mussarela, calabresa e cebola.",
+      "Preço": "R$ 31.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 57,
+      "Item": "Pizza Quatro Queijos",
+      "Descrição": "Molho de tomate, mussarela, queijo prato, queijo provolone e gorgonzola.",
+      "Preço": "R$ 34.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 58,
+      "Item": "Pizza Frango com Catupiry",
+      "Descrição": "Molho de tomate, mussarela, frango desfiado e catupiry.",
+      "Preço": "R$ 33.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 59,
+      "Item": "Pizza Portuguesa",
+      "Descrição": "Molho de tomate, mussarela, presunto, ovos, cebola, pimentão e azeitonas.",
+      "Preço": "R$ 35.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 60,
+      "Item": "Pizza Margherita Especial",
+      "Descrição": "Molho de tomate, mussarela, tomate, manjericão fresco e azeitonas pretas.",
+      "Preço": "R$ 30.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 61,
+      "Item": "Pizza Vegetariana",
+      "Descrição": "Molho de tomate, mussarela, palmito, champignon, milho, ervilha e cebola.",
+      "Preço": "R$ 32.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 62,
+      "Item": "Pizza Mexicana",
+      "Descrição": "Molho de tomate, mussarela, carne moída, pimenta jalapeño e nachos.",
+      "Preço": "R$ 36.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 63,
+      "Item": "Pizza Quatro Estações",
+      "Descrição": "Molho de tomate, mussarela, presunto, champignon, palmito e azeitonas.",
+      "Preço": "R$ 33.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 64,
+      "Item": "Pizza Bacon com Milho",
+      "Descrição": "Molho de tomate, mussarela, bacon, milho e catupiry.",
+      "Preço": "R$ 34.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 65,
+      "Item": "Pizza Margherita com Rúcula",
+      "Descrição": "Molho de tomate, mussarela, tomate, manjericão fresco e rúcula.",
+      "Preço": "R$ 31.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 66,
+      "Item": "Pizza Napolitana",
+      "Descrição": "Molho de tomate, mussarela, tomate, alho e manjericão fresco.",
+      "Preço": "R$ 29.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 67,
+      "Item": "Pizza Carne Seca com Catupiry",
+      "Descrição": "Molho de tomate, mussarela, carne seca desfiada e catupiry.",
+      "Preço": "R$ 37.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 68,
+      "Item": "Pizza Atum",
+      "Descrição": "Molho de tomate, mussarela, atum, cebola e azeitonas.",
+      "Preço": "R$ 32.99",
+      "Categoria": "Pizza"
+    },
+    {
+      "ID Item": 69,
+      "Item": "Refrigerante Coca-Cola",
+      "Descrição": "Refrigerante de cola tradicional.",
+      "Preço": "R$ 5.00",
+      "Categoria": "Bebidas"
+    },
+    {
+      "ID Item": 70,
+      "Item": "Suco de Laranja Natural",
+      "Descrição": "Suco fresco de laranja espremida na hora.",
+      "Preço": "R$ 6.50",
+      "Categoria": "Bebidas"
+    },
+    {
+      "ID Item": 71,
+      "Item": "Água Mineral sem Gás",
+      "Descrição": "Água mineral natural sem adição de gás.",
+      "Preço": "R$ 3.00",
+      "Categoria": "Bebidas"
+    },
+    {
+      "ID Item": 72,
+      "Item": "Chá Gelado de Limão",
+      "Descrição": "Chá gelado de limão refrescante.",
+      "Preço": "R$ 4.50",
+      "Categoria": "Bebidas"
+    },
+    {
+      "ID Item": 73,
+      "Item": "Cerveja Pilsen",
+      "Descrição": "Cerveja pilsen clássica e refrescante.",
+      "Preço": "R$ 7.00",
+      "Categoria": "Bebidas"
+    },
+    {
+      "ID Item": 74,
+      "Item": "Milkshake de Morango",
+      "Descrição": "Milkshake cremoso de morango.",
+      "Preço": "R$ 8.50",
+      "Categoria": "Bebidas"
+    },
+    {
+      "ID Item": 75,
+      "Item": "Coquetel de Frutas Tropicais",
+      "Descrição": "Coquetel refrescante de frutas tropicais.",
+      "Preço": "R$ 6.50",
+      "Categoria": "Bebidas"
+    },
+    {
+      "ID Item": 76,
+      "Item": "Café Expresso",
+      "Descrição": "Café expresso encorpado e aromático.",
+      "Preço": "R$ 3.50",
+      "Categoria": "Bebidas"
+    },
+    {
+      "ID Item": 77,
+      "Item": "Torta de Chocolate",
+      "Descrição": "Deliciosa torta de chocolate com cobertura cremosa.",
+      "Preço": "R$ 7.50",
+      "Categoria": "Sobremesa"
+    },
+    {
+      "ID Item": 78,
+      "Item": "Sorvete de Baunilha",
+      "Descrição": "Sorvete de baunilha cremoso e refrescante.",
+      "Preço": "R$ 4.00",
+      "Categoria": "Sobremesa"
+    },
+    {
+      "ID Item": 79,
+      "Item": "Pudim de Leite",
+      "Descrição": "Pudim de leite tradicional com calda caramelizada.",
+      "Preço": "R$ 5.50",
+      "Categoria": "Sobremesa"
+    },
+    {
+      "ID Item": 80,
+      "Item": "Cheesecake de Morango",
+      "Descrição": "Cheesecake com base de biscoito e cobertura de morango.",
+      "Preço": "R$ 8.00",
+      "Categoria": "Sobremesa"
+    },
+    {
+      "ID Item": 81,
+      "Item": "Brownie de Chocolate",
+      "Descrição": "Brownie macio e molhadinho com pedaços de chocolate.",
+      "Preço": "R$ 6.50",
+      "Categoria": "Sobremesa"
+    },
+    {
+      "ID Item": 82,
+      "Item": "Mousse de Maracujá",
+      "Descrição": "Mousse leve e refrescante com sabor de maracujá.",
+      "Preço": "R$ 4.50",
+      "Categoria": "Sobremesa"
+    },
+    {
+      "ID Item": 83,
+      "Item": "Tiramisu",
+      "Descrição": "Sobremesa italiana clássica à base de café e queijo mascarpone.",
+      "Preço": "R$ 9.50",
+      "Categoria": "Sobremesa"
+    },
+    {
+      "ID Item": 84,
+      "Item": "Creme Brulée",
+      "Descrição": "Creme de baunilha com uma crosta caramelizada por cima.",
+      "Preço": "R$ 7.00",
+      "Categoria": "Sobremesa" 
+    }
+  ],
+  "Funcionario": [
+    [
+      "ID Funcionário",
+      "Nome",
+      "CPF",
+      "Senha",
+      "Cargo",
+      "Salario"
+    ],
+    {
+      "id": 1000,
+      "Nome": "Ademir da Pizza",
+      "CPF": "11122233344",
+      "password": "1234",
+      "Cargo": "Administrador",
+      "Salario": "R$ 15000.00"
+    },
+    {
+      "id": 1001,
+      "Nome": "Pedro Pizzaiolo",
+      "CPF": "22233344455",
+      "password": "1234",
+      "Cargo": "Pizzaiolo",
+      "Salario": "R$ 8000.00"
+    },
+    {
+      "id": 1002,
+      "Nome": "Pati Pizzaiola",
+      "CPF": "33344455566",
+      "password": "1234",
+      "Cargo": "Pizzaiolo",
+      "Salario": "R$ 8000.00"
+    }
+  ],
+  "Pedidos": [
+    [
+      "ID Cliente",
+      "Nome",
+      "Contato",
+      "Valor Total",
+      "Método de Pagamento",
+      "Data e Hora."
+    ]
+  ]
+}

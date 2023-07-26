@@ -1,0 +1,60 @@
+.TableTopContainer {
+  width: 98%;
+  margin-left: 1%;
+  height: 10%;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.3s ease; /* Add transition property to control the animation */
+}
+
+.TableTopContainer.hidden {
+  height: 10%; /* Set the height to 0 when the element is hidden */
+}
+
+.TableOptions {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.TableInputOptions {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.TableBox {
+  overflow-x: auto;
+  width: 98%;
+  height: auto;
+  margin-left: 1%;
+}
+
+.Table {
+  overflow-x: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  width: 100%;
+  overflow-y: auto;
+  margin-bottom: 1%;
+  }
+
+  .Table th {
+    font-weight: bold;
+    width: fit-content;
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(19, 93, 177);
+  }
+
+  .Table td {
+    font-weight: bold;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: rgb(241, 241, 241);
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+  }
