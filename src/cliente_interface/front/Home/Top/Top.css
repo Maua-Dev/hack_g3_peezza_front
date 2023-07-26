@@ -1,0 +1,28 @@
+.Top {
+  display: grid;
+  position: fixed;
+  transition: height 0.3s ease;
+  border-radius: 0px 0px 20px 20px;
+  background-color: #ffa740;
+  justify-items: center;
+  align-items: center;
+  height: 12.25%;
+  width: 100%;
+  top: 0;
+  position: relative;
+  box-shadow: 0px 3px 4px #00000040;
+  }
+
+  .Top header {
+    color: #fffdfd;
+    font-family: "Roboto-Light", Helvetica;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+
+

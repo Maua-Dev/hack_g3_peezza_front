@@ -1,13 +1,19 @@
 import React from 'react';
-import Home from "./front/Home/Home";
-import Payment from "./front/Payment/Payment";
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// Admin-Imports
+import RoutesAdmin from './admin_interface/Routes_Admin';
+
+// Client-Imports 
+import RoutesClient from './cliente_interface/Routes_Client';
 
 export default function App() {
   return (
-    <Routes>
-      <Route element={<Home />} path="/" exact />
-      <Route element={<Payment />} path="/pagamento" />
-    </Routes>
+    <Router>
+      <Routes>
+        <Route path="/admin/*" element={<RoutesAdmin />} />
+        <Route path='/*' element={<RoutesClient />}/>
+      </Routes>
+    </Router>
   );
-};
+}

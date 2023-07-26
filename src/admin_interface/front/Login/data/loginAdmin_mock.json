@@ -1,0 +1,15 @@
+{
+    "login": [
+    { "id":"1000",
+      "nome":"Felipe",
+      "username":"Teste",
+      "password":"Teste2023",
+      "cargo":"administrador"
+    },
+    { "id":"1001",
+      "nome":"Rogerio",
+      "username":"Pizzaiolo",
+      "password":"Pizzaiolo2023",
+      "cargo":"pizzaiolo"}
+  ]
+}
