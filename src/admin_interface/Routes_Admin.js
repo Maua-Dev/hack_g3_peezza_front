@@ -7,7 +7,7 @@ import Pizzaiolo from './front/Pizzaiolo_Interface/Pizzaiolo';
 export default function RoutesAdmin() {
   return (
     <Routes>
-      <Route exact path='/' element={<Login />} />
+      <Route path='/' element={<Login />} />
       <Route path='/administrador' element={<Admin />} />
       <Route path='/pizzaiolo' element={<Pizzaiolo />} />
     </Routes>
