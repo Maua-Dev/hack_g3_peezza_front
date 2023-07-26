@@ -4,6 +4,18 @@ import { Link } from "react-router-dom";
 
 export const PayButton = ({ continues, selectedOption }) => {
 
+  const currentDate = new Date();
+
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth() + 1;
+  const day = currentDate.getDate();
+  const hours = currentDate.getHours();
+  const minutes = currentDate.getMinutes();
+  const seconds = currentDate.getSeconds();
+
+  const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+
+
   function saveOrder() {
     var name = JSON.parse(localStorage.getItem("nome"));
     var number = JSON.parse(localStorage.getItem("contato"));
@@ -14,11 +26,12 @@ export const PayButton = ({ continues, selectedOption }) => {
       name: name,
       number: number,
       cart: cart,
-      payment: paymentOption
+      payment: paymentOption,
+      datetime: formattedDateTime,
+      status: "Em preparo"
     };
 
-    console.log(order)
-
+    localStorage.setItem("order", JSON.stringify(order));
   };
 
   return (

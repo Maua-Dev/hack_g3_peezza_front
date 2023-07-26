@@ -39,10 +39,10 @@ export default function Table({ selectedOption }) {
   function renderTableData() {
     return (
       <tbody className='TableData'>
-        {tableData.map((row, index) => (
-          <tr key={index}>
-            {Object.values(row).map((value, idx) => (
-              <td key={idx}>{value}</td>
+        {tableData.map((row, rowIndex) => (
+          <tr key={rowIndex}>
+            {tableAtributes.map((attribute, attributeIndex) => (
+              <td key={attributeIndex}>{row[attribute]}</td>
             ))}
           </tr>
         ))}

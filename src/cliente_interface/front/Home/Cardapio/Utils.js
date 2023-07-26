@@ -18,8 +18,8 @@ export const createNewCtgr = (Tittle,category, handleItemClick, clickedItem) => 
 
 // Home - Cardapio 
 export const showItens = (item, handleItemClick, clickedItem) => {
-    return item.map((Item) => (
-      <div className={`Item ${clickedItem === Item ? 'Clicked' : ''}`}>
+    return item.map((Item,index) => (
+      <div key={index} className={`Item ${clickedItem === Item ? 'Clicked' : ''}`}>
         <img className={'imagem'} src={Item.imagem} alt="Imagem"></img>
         <header className='nome'>{Item.nome}</header>
         <label className='valor'>R$ {Item.valor}</label>
