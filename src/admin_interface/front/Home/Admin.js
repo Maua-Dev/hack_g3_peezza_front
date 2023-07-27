@@ -8,8 +8,6 @@ export default function Admin() {
   const Username = 'Felipe';
   const [selectedOption, setSelectedOption] = useState(null);
 
-  
-
   return (
     <div className='Admin'>
       <LeftBox UserName={Username} setSelectedOption={setSelectedOption} />

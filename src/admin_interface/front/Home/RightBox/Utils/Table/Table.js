@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Table.css';
 import { fetchData } from '../../../../../../back_operation_mock/repo_mock';
+import AddOption from './CRUDOptions/AddOption';
+import AlterOption from './CRUDOptions/AlterOption';
 
 export default function Table({ selectedOption }) {
 
@@ -8,6 +10,8 @@ export default function Table({ selectedOption }) {
   const [tableData, setTableData] = useState([]);
 
   const [showAddOption, setShowAddOption] = useState(false);
+  const [showAlterOption, setShowAlterOption] = useState(false);
+  const [showDeleteOption, setShowDeleteOption] = useState(false);
 
   useEffect(() => {
     const fetchDataAndUpdateTable = async () => {
@@ -19,8 +23,13 @@ export default function Table({ selectedOption }) {
         console.error('Erro ao enviar mensagem:', error);
       }
     };
-  
+
     fetchDataAndUpdateTable();
+
+    setShowAddOption(false);
+    setShowAlterOption(false);
+    setShowDeleteOption(false);
+
   }, [selectedOption]);
 
   function renderTableAtributes() {
@@ -38,7 +47,7 @@ export default function Table({ selectedOption }) {
 
   function renderTableData() {
     return (
-      <tbody className='TableData'>
+      <tbody className="TableData">
         {tableData.map((row, rowIndex) => (
           <tr key={rowIndex}>
             {tableAtributes.map((attribute, attributeIndex) => (
@@ -50,22 +59,17 @@ export default function Table({ selectedOption }) {
     );
   }
 
-  function renderAddOption() {
-    return (
-      <div className='TableInputOptions'> 
-        
-      </div>
-    );
-  }
   return (
     <>
-      <div className={`TableTopContainer ${!showAddOption && "hidden"}`}>
+      <div className={'TableTopContainer'}>
         <div className='TableOptions'>
           <button onClick={() => setShowAddOption(!showAddOption)}>ADICIONAR</button>
-          <button>DELETAR</button>
-          <button>ALTERAR</button>
+          <button onClick={() => setShowAlterOption(!showAlterOption)}>ALTERAR</button>
+          <button id='delete' onClick={() => setShowDeleteOption(!showDeleteOption)}>DELETAR</button>
         </div>
-        {showAddOption && renderAddOption()}
+        {showAddOption && <AddOption selectedOption={selectedOption} showAddOption={showAddOption} setShowAddOption={setShowAddOption} attributes={tableAtributes} />}
+        {showAlterOption && <AlterOption setShowAlterOption={setShowAlterOption} attributes={tableAtributes} data={tableData} />}
+        {showDeleteOption && <AddOption showAddOption={showDeleteOption} setShowAddOption={setShowDeleteOption} attributes={tableAtributes} />}
       </div>
       <div className='TableBox'>
         <table className='Table'>

@@ -1,0 +1,69 @@
+.TableInputOptions {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: height 2s ease;
+    background-color: white;
+    color: white;
+  }
+
+  .InputContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    }
+
+    .InputContainer .Input {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 70%;
+    }
+    
+    .InputContainer .Input label {
+        border-radius: 10px;
+        text-align: center;
+        width: 100%;
+        background-color: rgb(19, 93, 177);
+    }
+
+    .InputContainer .Input input {
+        border-radius: 10px;
+        text-align: center;
+        width: 80%;
+        height: 30%;
+    }
+
+.TableInputOptions button{
+    height: 100%;
+    width: 5%;
+    font-size: larger;
+    border: 0;
+    color: white;
+  }
+
+  #cancel {
+    background-color: red;
+    transition: background-color 0.1s ease;
+  }
+
+  #cancel:hover {
+    background-color: rgb(122, 0, 0);
+  }
+
+  #save {
+    background-color: green;
+    transition: background-color 0.1s ease;
+  }
+
+    #save:hover {
+        background-color: rgb(1, 59, 1);
+    }
+  
