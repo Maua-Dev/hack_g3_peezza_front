@@ -8,7 +8,7 @@ export default function Feedback() {
     return(
       <div className='Feedback'>
         <Top></Top>
-        
+        <MidFeed></MidFeed>
       </div>
     );
 }
