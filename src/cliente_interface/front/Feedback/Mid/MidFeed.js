@@ -66,6 +66,6 @@ export const MidFeed = () => {
       {feedbackSubmitted && (
         <p className="thank-you">Muito obrigado pelo seu pedido! Até a próxima!</p>
       )}
-    </div>
+    </div>   
   );
 };
