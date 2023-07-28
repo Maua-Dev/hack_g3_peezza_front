@@ -2,27 +2,24 @@ import React from "react";
 import "./DeleteOption.css";
 import { ImCancelCircle } from "react-icons/im";
 import { AiOutlineCheckCircle } from "react-icons/ai";
+import { deleteItem } from "../../../../../../../back_operation_mock/repo_mock";
 
-export default function AddOption({showAddOption, setShowAddOption, attributes}) {
+export default function DeleteOption({ selectedOption, setShowDeleteOption}) {
 
-  function renderInputs () {
-    return (
-      <div className="InputContainer">
-        {attributes.map((attribute, index) => (
-          <div key={index} className="Input">
-            <label>{attribute}</label>
-            <input type="text" />
-          </div>
-        ))}
-      </div>
-    );
+  function handleSaveButtonClick() {
+    const itemId = document.getElementById("ID").value;
+    console.log(itemId)
+    deleteItem(selectedOption, itemId);
+    setShowDeleteOption(false);
   }
   
   return (
     <div className={"TableInputOptions"}> 
-      {renderInputs()}
-      <button onClick={() => setShowAddOption(!showAddOption)} id="cancel"><ImCancelCircle/></button>
-      <button id="save"><AiOutlineCheckCircle/></button>
+       <div className="InputContainer">
+        <input id="ID" type="number" placeholder="ID"/>
+       </div>
+      <button onClick={() => setShowDeleteOption(false)} id="cancel"><ImCancelCircle/></button>
+      <button id="save" onClick={() => handleSaveButtonClick()}><AiOutlineCheckCircle/></button>
     </div>
   );
 }
