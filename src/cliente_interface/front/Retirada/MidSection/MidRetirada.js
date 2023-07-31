@@ -1,29 +1,33 @@
 import React, { useState, useEffect } from "react";
 import './MidRetirada.css';
 import gifImage from './Loading4.gif';
+import { Bottom } from "../Bottom/BottomRetirada";
 
 export const Mid = () => {
   const nome = localStorage.getItem('nome');
   const storedOrder = JSON.parse(localStorage.getItem('order'));
   const [order, setStatus] = useState(storedOrder || { status: 'Em preparo' });
+  const [status, setMidStatus] = useState(order.status);
 
   useEffect(() => {
-    // Function to update the status to "Pronto" after 20 seconds
+    
     const updateStatus = () => {
       setTimeout(() => {
         setStatus(prevOrder => ({
           ...prevOrder,
           status: "Pronto"
         }));
-      }, 20000); // 20 seconds (20000 milliseconds)
+      }, 2000); 
     };
-
-    // Call the function to start the countdown when the component mounts
     updateStatus();
 
-    // Cleanup function to clear the timeout when the component unmounts
     return () => clearTimeout(updateStatus);
   }, []);
+
+  useEffect(() => {
+    
+    setMidStatus(order.status);
+  }, [order.status]);
 
   return (
     <div className="mid_p">
@@ -36,8 +40,10 @@ export const Mid = () => {
           <span>Status:</span>
           <div className="line"></div>
         </div>
-        <span className="centered">{order.status}</span>       
+        <span className="centered">{order.status}</span>
       </div>
+      {}
+      <Bottom status={status} />
     </div>
   );
 }
