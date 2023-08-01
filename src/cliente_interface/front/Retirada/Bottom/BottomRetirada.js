@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./BottomRetirada.css";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
+export const Bottom = ({ isButtonEnabled }) => {
+   
+  const [status, setStatus] = useState(false);
+  useEffect(() => {
+  if (isButtonEnabled === "Pronto") {
+    setStatus(true);
+    console.log(isButtonEnabled);
+  }
+  }, [setStatus,isButtonEnabled]);
 
-
-
-export const Bottom = () => {
   return (
     <div className="Bottom">
-      <div className="customCheckBoxHolder">
-      <input type="checkbox" id="cCB1" className="customCheckBoxInput" />
-      <label htmlFor="cCB1" className="customCheckBoxWrapper">
-        <div className="customCheckBox">
-          <div className="inner">Confirme a retirada</div>
-        </div>
-      </label>
-    </div>
+      <Link to={"/client/feedback/"} className="Link">
+        {}
+        <button className="ConfirmButton" disabled={!status}>
+          Confirme a retirada
+        </button>
+      </Link>
     </div>
   );
 };
