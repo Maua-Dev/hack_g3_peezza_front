@@ -3,7 +3,7 @@ import './MidRetirada.css';
 import gifImage from './Loading4.gif';
 import { Bottom } from "../Bottom/BottomRetirada";
 
-export const Mid = () => {
+export const Mid = ({setButtonEnabled}) => {
   const nome = localStorage.getItem('nome');
   const storedOrder = JSON.parse(localStorage.getItem('order'));
   const [order, setStatus] = useState(storedOrder || { status: 'Em preparo' });
@@ -17,17 +17,14 @@ export const Mid = () => {
           ...prevOrder,
           status: "Pronto"
         }));
-      }, 2000); 
+      }, 5000); 
     };
     updateStatus();
+    setMidStatus(order.status);
+    setButtonEnabled(order.status);
 
     return () => clearTimeout(updateStatus);
-  }, []);
-
-  useEffect(() => {
-    
-    setMidStatus(order.status);
-  }, [order.status]);
+  }, [order.status, setButtonEnabled]);
 
   return (
     <div className="mid_p">
