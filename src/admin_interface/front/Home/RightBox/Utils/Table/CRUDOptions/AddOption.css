@@ -41,6 +41,14 @@
         height: 30%;
     }
 
+    .InputContainer .Input #category {
+      border-radius: 10px;
+      border: 1px black solid;
+      text-align: center;
+      width: 80%;
+      height: 40%;
+    }
+
 .TableInputOptions button{
     height: 100%;
     width: 5%;

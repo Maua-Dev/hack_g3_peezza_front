@@ -1,6 +1,7 @@
 import React from "react";
 import "./Utils.css";
 import { BsFillTrash3Fill } from "react-icons/bs";
+import InputMask from 'react-input-mask';
 
 export const Cadastro = (nome, contato, setNome, setContato) => {
 
@@ -11,6 +12,7 @@ export const Cadastro = (nome, contato, setNome, setContato) => {
 
   const handleContatoChange = (event) => {
     setContato(event.target.value);
+    
     localStorage.setItem('contato', JSON.stringify(event.target.value))
   };
 
@@ -21,7 +23,7 @@ export const Cadastro = (nome, contato, setNome, setContato) => {
         <label htmlFor="name" className="form__label">Nome</label>
       </div>
       <div className="form__group field">
-        <input type="tel" className="form__field" placeholder="Número de Contato" name={contato} value={contato} id='contato' required onChange={handleContatoChange}/>
+        <InputMask mask={"(99) 99999-9999"} type="tel" className="form__field" placeholder="Número de Contato" name={contato} value={contato} id='contato' required onChange={handleContatoChange}/>
         <label htmlFor="contato" className="form__label">Número de Contato</label>
       </div>
     </div>

@@ -27,11 +27,29 @@ export default function AddOption({ selectedOption, setShowAddOption, attributes
             ) : (
               <>
                 <label>{attribute}</label>
-                <input
-                  type="text"
-                  value={inputValues[attribute] || ""}
-                  onChange={(e) => handleInputChange(attribute, e.target.value)}
-                />
+                {attribute === "Preço" ? (
+                  <input
+                    type="number"
+                    value={inputValues[attribute] || ""}
+                    onChange={(e) => handleInputChange(attribute, e.target.value)}
+                  />
+                ) : attribute === "Categoria" ? (
+                  <select
+                    id="category"
+                    value={inputValues[attribute] || ""}
+                    onChange={(e) => handleInputChange(attribute, e.target.value)}
+                  >
+                    <option value="Pizza">Pizza</option>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Sobremesa">Sobremesa</option>
+                  </select>
+                ) : (
+                  <input
+                    type="text"
+                    value={inputValues[attribute] || ""}
+                    onChange={(e) => handleInputChange(attribute, e.target.value)}
+                  />
+                )}
               </>
             )}
           </div>
@@ -39,6 +57,7 @@ export default function AddOption({ selectedOption, setShowAddOption, attributes
       </div>
     );
   }
+  
 
   return (
     <div className={"TableInputOptions"}>

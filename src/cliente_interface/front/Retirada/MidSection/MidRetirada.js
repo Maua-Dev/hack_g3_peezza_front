@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import './MidRetirada.css';
-import gifImage from './Loading4.gif';
 import { Bottom } from "../Bottom/BottomRetirada";
 
 export const Mid = ({setButtonEnabled}) => {
@@ -32,7 +31,7 @@ export const Mid = ({setButtonEnabled}) => {
         <h1>{nome} seu pedido foi enviado:</h1>
       </div>
       <div>
-        <img src={gifImage} alt="Loading..." />
+        <img src={"https://djzvsk74tjgdb.cloudfront.net/peeza/Outros/LoadingPizza.gif"} alt="Loading..." />
         <div className="status">
           <span>Status:</span>
           <div className="line"></div>

@@ -4,6 +4,7 @@ import { fetchData } from '../../../../../../back_operation_mock/repo_mock';
 import AddOption from './CRUDOptions/AddOption';
 import AlterOption from './CRUDOptions/AlterOption';
 import DeleteOption from './CRUDOptions/DeleteOption';
+import { BiRefresh } from "react-icons/bi";
 
 export default function Table({ selectedOption }) {
 
@@ -13,6 +14,8 @@ export default function Table({ selectedOption }) {
   const [showAddOption, setShowAddOption] = useState(false);
   const [showAlterOption, setShowAlterOption] = useState(false);
   const [showDeleteOption, setShowDeleteOption] = useState(false);
+
+  const [updateTrigger, setUpdateTrigger] = useState(false);
 
   useEffect(() => {
     const fetchDataAndUpdateTable = async () => {
@@ -24,9 +27,13 @@ export default function Table({ selectedOption }) {
         console.error('Erro ao enviar mensagem:', error);
       }
     };
-  
+
     fetchDataAndUpdateTable();
-  }, [selectedOption]);  
+  }, [selectedOption, updateTrigger]);
+
+  const handleAutomaticUpdate = () => {
+    setUpdateTrigger((prevTrigger) => !prevTrigger);
+  };
 
   function renderTableAtributes() {
     return (
@@ -58,6 +65,7 @@ export default function Table({ selectedOption }) {
     <>
       <div className={'TableTopContainer'}>
         <div className='TableOptions'>
+          <button id='refresh' onClick={handleAutomaticUpdate}><BiRefresh/></button>
           <button onClick={() => setShowAddOption(!showAddOption)}>ADICIONAR</button>
           <button onClick={() => setShowAlterOption(!showAlterOption)}>ALTERAR</button>
           <button id='delete' onClick={() => setShowDeleteOption(!showDeleteOption)}>DELETAR</button>

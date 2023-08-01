@@ -31,6 +31,17 @@
     cursor: pointer;
   }
 
+  .TableOptions #refresh {
+    text-align: center;
+    font-size: 50px;
+    width: 5%;
+  }
+
+  .TableOptions #refresh:hover {
+    background-color: rgb(0, 0, 122);
+    cursor: pointer;
+  }
+
   .TableOptions #delete {
     background-color: red;
   }

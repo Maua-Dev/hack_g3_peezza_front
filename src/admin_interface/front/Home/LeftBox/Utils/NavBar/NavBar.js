@@ -23,7 +23,6 @@ export function NavBar({ Icon, Name, setSelectedOption }) {
   };
 
 
-
   return (
     <>
       <div className={"NavTables"} style={{ background: navBgdColor }} onClick={handleNavTablesClick}>

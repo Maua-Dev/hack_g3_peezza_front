@@ -64,7 +64,13 @@ export function addItem(selectedOption, newItem) {
     const jsonData = localStorage.getItem(selectedOption);
     const data = jsonData ? JSON.parse(jsonData) : [];
     const lastId = data['tuples'].length > 0 ? data['tuples'][data['tuples'].length - 1].ID : 0;
-    const newItemWithId = { ID: lastId + 1, ...newItem };
+    let newItemWithId = {};
+    if (selectedOption === "Cardapio") {
+      var category = newItem.Categoria;
+      newItemWithId = { ID: lastId + 1, ...newItem, Imagem: "https://djzvsk74tjgdb.cloudfront.net/peeza/Outros/Alt"+category+".jpg" };
+    } else {
+      newItemWithId = { ID: lastId + 1, ...newItem };
+    }
     data['tuples'].push(newItemWithId);
     const novaStringJson = JSON.stringify(data);
     localStorage.setItem(selectedOption, novaStringJson);
