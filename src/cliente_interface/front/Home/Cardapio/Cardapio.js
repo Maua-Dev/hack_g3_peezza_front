@@ -19,10 +19,10 @@ export const Cardapio = ({ pizza, bebida, sobremesa }) => {
     } else {
       novoCarrinho = [];
     }
-    const existingItem = novoCarrinho.find((cartItem) => cartItem.id === item.id);
+    const existingItem = novoCarrinho.find((cartItem) => cartItem["ID"] === item["ID"]);
     if (existingItem) {
       const updatedCarrinho = novoCarrinho.map((cartItem) =>
-        cartItem.id === item.id ? { ...cartItem, quantidade: cartItem.quantidade + 1 } : cartItem
+        cartItem["ID"] === item["ID"] ? { ...cartItem, quantidade: cartItem.quantidade + 1 } : cartItem
       );
       novoCarrinho = updatedCarrinho;
     } else {

@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import './Table.css';
 import { fetchData } from '../../../../../../back_operation_mock/repo_mock';
+import AddOption from './CRUDOptions/AddOption';
+import AlterOption from './CRUDOptions/AlterOption';
+import DeleteOption from './CRUDOptions/DeleteOption';
 
 export default function Table({ selectedOption }) {
 
-  const [tableAtributes, setTableAtributes] = useState([]);
+  const [tableAttributes, setTableAttributes] = useState([]);
   const [tableData, setTableData] = useState([]);
 
   const [showAddOption, setShowAddOption] = useState(false);
+  const [showAlterOption, setShowAlterOption] = useState(false);
+  const [showDeleteOption, setShowDeleteOption] = useState(false);
 
   useEffect(() => {
     const fetchDataAndUpdateTable = async () => {
       try {
         const response = fetchData(selectedOption);
-        setTableAtributes(response.attributes);
+        setTableAttributes(response.attributes);
         setTableData(response.tuples);
       } catch (error) {
         console.error('Erro ao enviar mensagem:', error);
@@ -21,27 +26,26 @@ export default function Table({ selectedOption }) {
     };
   
     fetchDataAndUpdateTable();
-  }, [selectedOption]);
+  }, [selectedOption]);  
 
   function renderTableAtributes() {
     return (
       <thead className='.TableTittle'>
         <tr>
-          {tableAtributes.map((attribute, index) => (
+          {tableAttributes.map((attribute, index) => (
             <th key={index}>{attribute}</th>
           ))}
         </tr>
       </thead>
-
     );
   }
 
   function renderTableData() {
     return (
-      <tbody className='TableData'>
+      <tbody className="TableData">
         {tableData.map((row, rowIndex) => (
           <tr key={rowIndex}>
-            {tableAtributes.map((attribute, attributeIndex) => (
+            {tableAttributes.map((attribute, attributeIndex) => (
               <td key={attributeIndex}>{row[attribute]}</td>
             ))}
           </tr>
@@ -50,22 +54,17 @@ export default function Table({ selectedOption }) {
     );
   }
 
-  function renderAddOption() {
-    return (
-      <div className='TableInputOptions'> 
-        
-      </div>
-    );
-  }
   return (
     <>
-      <div className={`TableTopContainer ${!showAddOption && "hidden"}`}>
+      <div className={'TableTopContainer'}>
         <div className='TableOptions'>
           <button onClick={() => setShowAddOption(!showAddOption)}>ADICIONAR</button>
-          <button>DELETAR</button>
-          <button>ALTERAR</button>
+          <button onClick={() => setShowAlterOption(!showAlterOption)}>ALTERAR</button>
+          <button id='delete' onClick={() => setShowDeleteOption(!showDeleteOption)}>DELETAR</button>
         </div>
-        {showAddOption && renderAddOption()}
+        {showAddOption && <AddOption selectedOption={selectedOption} showAddOption={showAddOption} setShowAddOption={setShowAddOption} attributes={tableAttributes} />}
+        {showAlterOption && <AlterOption setShowAlterOption={setShowAlterOption} attributes={tableAttributes} data={tableData} />}
+        {showDeleteOption && <DeleteOption selectedOption={selectedOption} setShowDeleteOption={setShowDeleteOption} />}
       </div>
       <div className='TableBox'>
         <table className='Table'>

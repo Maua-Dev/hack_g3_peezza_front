@@ -14,9 +14,9 @@
   }
 
   .mid_p img {
-    width: 310px;
-    height: 310px;
-    margin-top: -10%;
+    width: 260px;
+    height: 260 px;
+    margin-top: 0%;
   }
 
   .status {
@@ -36,6 +36,7 @@
     justify-content: center;
     color: white;
     font-family: "Roboto-Regular", Helvetica;
+    margin-top: 3%;
   }
 
   .mid_p .line {

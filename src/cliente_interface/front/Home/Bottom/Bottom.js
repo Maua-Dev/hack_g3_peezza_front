@@ -11,7 +11,7 @@ export const Bottom = () => {
   const [contato, setContato] = useState('');
   const [carrinho, setCarrinho] = useState([]);
   const valorTotal = carrinho.reduce((total, item) => {
-    return total + parseFloat(item.valor) * parseInt(item.quantidade);
+    return total + parseFloat(item.Preço) * parseInt(item.quantidade);
   }, parseFloat('0.00'));
   const [carrinhoAtivo, setCarrinhoAtivo] = useState(false);
   const [continuarAtivo, setContinuarAtivo] = useState(false);

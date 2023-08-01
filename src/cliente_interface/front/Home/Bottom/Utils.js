@@ -33,11 +33,11 @@ export const CarrinhoBox = (carrinho,handleExcluirItem) => {
   const ShowCarrinho = (carrinho, handleExcluirItem) => {
     return carrinho.map((Item, index) => (
       <div className='ItemCarrinho' key={index}>
-        <img className="image" src={Item.imagem} alt={Item.nome}></img>
+        <img className="image" src={Item.Imagem} alt={Item.Item}></img>
         <div className='Detalhes'>
-          <header className='Nome'>{Item.nome}</header>
+          <header className='Nome'>{Item.Item}</header>
           <div className="down">
-            <label className='Valor'>R$ {Item.valor}</label>
+            <label className='Valor'>R$ {Item.Preço}</label>
             <div className='DivQuantidade'>
               <div className='Lixeira' onClick={() => handleExcluirItem(index)}>
               <BsFillTrash3Fill size={'20px'} />

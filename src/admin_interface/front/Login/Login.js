@@ -20,11 +20,12 @@ export default function Login() {
   };
 
   const handleLogin = () => {
+    console.log(fetchData('Funcionario'));
     const accounts = fetchData('Funcionario').tuples;
     const idUser = document.getElementById('idUser').value.trim();
     const password = document.getElementById('password').value;
-
-    const existingUser = accounts.find((account) => account.id.toString() === idUser && account.password === password);
+    console.log(accounts);
+    const existingUser = accounts.find((account) => account['ID'].toString() === idUser && account.Senha === password);
 
     if (existingUser) {
       navigate('administrador/');
