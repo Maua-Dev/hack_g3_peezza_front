@@ -11,218 +11,249 @@
         "ID": 54,
         "Item": "Pizza Margherita",
         "Descrição": "Molho de tomate, mussarela, tomate e manjericão fresco.",
-        "Preço": "R$ 29.99",
-        "Categoria": "Pizza"
+        "Preço": "29.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaMarguerita.jpg"
       },
       {
         "ID": 55,
         "Item": "Pizza Pepperoni",
         "Descrição": "Molho de tomate, mussarela e pepperoni.",
-        "Preço": "R$ 32.99",
-        "Categoria": "Pizza"
+        "Preço": "32.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaPepperoni.jpg"
       },
       {
         "ID": 56,
         "Item": "Pizza Calabresa",
         "Descrição": "Molho de tomate, mussarela, calabresa e cebola.",
-        "Preço": "R$ 31.99",
-        "Categoria": "Pizza"
+        "Preço": "31.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaCalabresa.jpg"
       },
       {
         "ID": 57,
         "Item": "Pizza Quatro Queijos",
         "Descrição": "Molho de tomate, mussarela, queijo prato, queijo provolone e gorgonzola.",
-        "Preço": "R$ 34.99",
-        "Categoria": "Pizza"
+        "Preço": "34.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaQuatroQueijos.jpg"
       },
       {
         "ID": 58,
         "Item": "Pizza Frango com Catupiry",
         "Descrição": "Molho de tomate, mussarela, frango desfiado e catupiry.",
-        "Preço": "R$ 33.99",
-        "Categoria": "Pizza"
+        "Preço": "33.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaFrangoCatupiry.jpg"
       },
       {
         "ID": 59,
         "Item": "Pizza Portuguesa",
         "Descrição": "Molho de tomate, mussarela, presunto, ovos, cebola, pimentão e azeitonas.",
-        "Preço": "R$ 35.99",
-        "Categoria": "Pizza"
+        "Preço": "35.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaPortuguesa.jpg"
       },
       {
         "ID": 60,
         "Item": "Pizza Margherita Especial",
         "Descrição": "Molho de tomate, mussarela, tomate, manjericão fresco e azeitonas pretas.",
-        "Preço": "R$ 30.99",
-        "Categoria": "Pizza"
+        "Preço": "30.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaMargueritaEspecial.jpg"
       },
       {
         "ID": 61,
         "Item": "Pizza Vegetariana",
         "Descrição": "Molho de tomate, mussarela, palmito, champignon, milho, ervilha e cebola.",
-        "Preço": "R$ 32.99",
-        "Categoria": "Pizza"
+        "Preço": "32.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaVegetariana.jpg"
       },
       {
         "ID": 62,
         "Item": "Pizza Mexicana",
         "Descrição": "Molho de tomate, mussarela, carne moída, pimenta jalapeño e nachos.",
-        "Preço": "R$ 36.99",
-        "Categoria": "Pizza"
+        "Preço": "36.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaMexicana.jpg"
       },
       {
         "ID": 63,
         "Item": "Pizza Quatro Estações",
         "Descrição": "Molho de tomate, mussarela, presunto, champignon, palmito e azeitonas.",
-        "Preço": "R$ 33.99",
-        "Categoria": "Pizza"
+        "Preço": "33.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaQuatroEstacoes.jpg"
       },
       {
         "ID": 64,
         "Item": "Pizza Bacon com Milho",
         "Descrição": "Molho de tomate, mussarela, bacon, milho e catupiry.",
-        "Preço": "R$ 34.99",
-        "Categoria": "Pizza"
+        "Preço": "34.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaBaconMilho.jpg"
       },
       {
         "ID": 65,
         "Item": "Pizza Margherita com Rúcula",
         "Descrição": "Molho de tomate, mussarela, tomate, manjericão fresco e rúcula.",
-        "Preço": "R$ 31.99",
-        "Categoria": "Pizza"
+        "Preço": "31.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaMargheritaRucula.jpg"
       },
       {
         "ID": 66,
         "Item": "Pizza Napolitana",
         "Descrição": "Molho de tomate, mussarela, tomate, alho e manjericão fresco.",
-        "Preço": "R$ 29.99",
-        "Categoria": "Pizza"
+        "Preço": "29.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaNapolitana.jpg"
       },
       {
         "ID": 67,
         "Item": "Pizza Carne Seca com Catupiry",
         "Descrição": "Molho de tomate, mussarela, carne seca desfiada e catupiry.",
-        "Preço": "R$ 37.99",
-        "Categoria": "Pizza"
+        "Preço": "37.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaCarneSecaCatupiry.jpg"
       },
       {
         "ID": 68,
         "Item": "Pizza Atum",
         "Descrição": "Molho de tomate, mussarela, atum, cebola e azeitonas.",
-        "Preço": "R$ 32.99",
-        "Categoria": "Pizza"
+        "Preço": "32.99",
+        "Categoria": "Pizza",
+        "Imagem": "https://djzvsk74tjgdb.cloudfront.net/peeza/Pizzas/PizzaAtum.jpg"
       },
       {
         "ID": 69,
         "Item": "Refrigerante Coca-Cola",
         "Descrição": "Refrigerante de cola tradicional.",
-        "Preço": "R$ 5.00",
-        "Categoria": "Bebidas"
+        "Preço": "5.00",
+        "Categoria": "Bebidas",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Bebidas/CocaCola.jpg"
       },
       {
         "ID": 70,
         "Item": "Suco de Laranja Natural",
         "Descrição": "Suco fresco de laranja espremida na hora.",
-        "Preço": "R$ 6.50",
-        "Categoria": "Bebidas"
+        "Preço": "6.50",
+        "Categoria": "Bebidas",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Bebidas/SucoLaranja.jpg"
       },
       {
         "ID": 71,
         "Item": "Água Mineral sem Gás",
         "Descrição": "Água mineral natural sem adição de gás.",
-        "Preço": "R$ 3.00",
-        "Categoria": "Bebidas"
+        "Preço": "3.00",
+        "Categoria": "Bebidas",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Bebidas/AguaSemGas.jpg"
       },
       {
         "ID": 72,
         "Item": "Chá Gelado de Limão",
         "Descrição": "Chá gelado de limão refrescante.",
-        "Preço": "R$ 4.50",
-        "Categoria": "Bebidas"
+        "Preço": "4.50",
+        "Categoria": "Bebidas",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Bebidas/ChaGelado.jpg"
       },
       {
         "ID": 73,
         "Item": "Cerveja Pilsen",
         "Descrição": "Cerveja pilsen clássica e refrescante.",
-        "Preço": "R$ 7.00",
-        "Categoria": "Bebidas"
+        "Preço": "7.00",
+        "Categoria": "Bebidas",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Bebidas/CervejaPilsen.jpg"
       },
       {
         "ID": 74,
         "Item": "Milkshake de Morango",
         "Descrição": "Milkshake cremoso de morango.",
-        "Preço": "R$ 8.50",
-        "Categoria": "Bebidas"
+        "Preço": "8.50",
+        "Categoria": "Bebidas",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Bebidas/MilkshakeMorango.jpg"
       },
       {
         "ID": 75,
         "Item": "Coquetel de Frutas Tropicais",
         "Descrição": "Coquetel refrescante de frutas tropicais.",
-        "Preço": "R$ 6.50",
-        "Categoria": "Bebidas"
+        "Preço": "6.50",
+        "Categoria": "Bebidas",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Bebidas/CoquetelFrutas.jpg"
       },
       {
         "ID": 76,
         "Item": "Café Expresso",
         "Descrição": "Café expresso encorpado e aromático.",
-        "Preço": "R$ 3.50",
-        "Categoria": "Bebidas"
+        "Preço": "3.50",
+        "Categoria": "Bebidas",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Bebidas/CafeExpresso.jpg"
       },
       {
         "ID": 77,
         "Item": "Torta de Chocolate",
         "Descrição": "Deliciosa torta de chocolate com cobertura cremosa.",
-        "Preço": "R$ 7.50",
-        "Categoria": "Sobremesa"
+        "Preço": "7.50",
+        "Categoria": "Sobremesa",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Sobremesas/TortaChocolate.jpg"
       },
       {
         "ID": 78,
         "Item": "Sorvete de Baunilha",
         "Descrição": "Sorvete de baunilha cremoso e refrescante.",
-        "Preço": "R$ 4.00",
-        "Categoria": "Sobremesa"
+        "Preço": "4.00",
+        "Categoria": "Sobremesa",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Sobremesas/SorveteBaunilha.jpg"
       },
       {
         "ID": 79,
         "Item": "Pudim de Leite",
         "Descrição": "Pudim de leite tradicional com calda caramelizada.",
-        "Preço": "R$ 5.50",
-        "Categoria": "Sobremesa"
+        "Preço": "5.50",
+        "Categoria": "Sobremesa",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Sobremesas/PudimLeite.jpg"
       },
       {
         "ID": 80,
         "Item": "Cheesecake de Morango",
         "Descrição": "Cheesecake com base de biscoito e cobertura de morango.",
-        "Preço": "R$ 8.00",
-        "Categoria": "Sobremesa"
+        "Preço": "8.00",
+        "Categoria": "Sobremesa",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Sobremesas/CheesecakeMorango.jpg"
       },
       {
         "ID": 81,
         "Item": "Brownie de Chocolate",
         "Descrição": "Brownie macio e molhadinho com pedaços de chocolate.",
-        "Preço": "R$ 6.50",
-        "Categoria": "Sobremesa"
+        "Preço": "6.50",
+        "Categoria": "Sobremesa",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Sobremesas/BrownieChocolate.jpg"
       },
       {
         "ID": 82,
         "Item": "Mousse de Maracujá",
         "Descrição": "Mousse leve e refrescante com sabor de maracujá.",
-        "Preço": "R$ 4.50",
-        "Categoria": "Sobremesa"
+        "Preço": "4.50",
+        "Categoria": "Sobremesa",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Sobremesas/MousseMaracuja.jpg"
       },
       {
         "ID": 83,
         "Item": "Tiramisu",
         "Descrição": "Sobremesa italiana clássica à base de café e queijo mascarpone.",
-        "Preço": "R$ 9.50",
-        "Categoria": "Sobremesa"
+        "Preço": "9.50",
+        "Categoria": "Sobremesa",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Sobremesas/Tiramisu.jpg"
       },
       {
         "ID": 84,
         "Item": "Creme Brulée",
         "Descrição": "Creme de baunilha com uma crosta caramelizada por cima.",
-        "Preço": "R$ 7.00",
-        "Categoria": "Sobremesa" 
+        "Preço": "7.00",
+        "Categoria": "Sobremesa",
+        "Imagem":"https://djzvsk74tjgdb.cloudfront.net/peeza/Sobremesas/CremeBrulee.jpg"
       }
     ]
 }

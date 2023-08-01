@@ -9,6 +9,8 @@ export const fetchData = () => {
     const sobremesa = sobremesaData.cardapio;
 
     return { pizza, bebida, sobremesa };
+
+
   } catch (error) {
     console.error(error);
     return null;

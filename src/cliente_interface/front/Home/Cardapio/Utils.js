@@ -20,9 +20,9 @@ export const createNewCtgr = (Tittle,category, handleItemClick, clickedItem) => 
 export const showItens = (item, handleItemClick, clickedItem) => {
     return item.map((Item,index) => (
       <div key={index} className={`Item ${clickedItem === Item ? 'Clicked' : ''}`}>
-        <img className={'imagem'} src={Item.imagem} alt="Imagem"></img>
-        <header className='nome'>{Item.nome}</header>
-        <label className='valor'>R$ {Item.valor}</label>
+        <img className={'imagem'} src={Item.Imagem} alt="Imagem"></img>
+        <header className='nome'>{Item.Item}</header>
+        <label className='valor'>R$ {Item.Preço}</label>
         <button onClick={() => handleItemClick(Item)}></button>
       </div>
     ));
@@ -33,11 +33,11 @@ export const ItemBoxSlctd = ({item, handleItemClick, handleButtonClick}) => {
     <div className="ItemBoxSlctd">
       <div className="blur" onClick={() => {handleItemClick(null)}}></div>
       <div className="box">
-        <img className='imagem' src={item.imagem} alt="Imagem"></img>
+        <img className='imagem' src={item.Imagem} alt="Imagem"></img>
         <div className="text-item">
-          <header>{item.nome}</header>
-          <label className="descricao">{item.descricao}</label>
-          <label className="valor">R$ {item.valor}</label>
+          <header>{item.Item}</header>
+          <label className="descricao">{item.Descrição}</label>
+          <label className="valor">R$ {item.Preço}</label>
           <button onClick = {() => {handleButtonClick(item)}} >Adicionar</button>
         </div>
       </div>

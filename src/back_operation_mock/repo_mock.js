@@ -32,6 +32,33 @@ export function fetchData(selectedOption) {
   }
 }
 
+export function fetchDataCardapio() {
+  try {
+    let data = [];
+    let attributes = [];
+    let pizzaData = [];
+    let bebidaData = [];
+    let sobremesaData = [];
+
+    const savedData = localStorage.getItem('Cardapio');
+    if (savedData) {
+      const parsedData = JSON.parse(savedData);
+      data = parsedData.tuples;
+    } else {
+      [attributes, ...data] = TableDataCardapio['Cardapio'];
+      localStorage.setItem('Cardapio', JSON.stringify({ attributes, tuples: data }));
+    }
+    pizzaData = data.filter((item) => item['Categoria'] === 'Pizza');
+    bebidaData = data.filter((item) => item['Categoria'] === 'Bebidas');
+    sobremesaData = data.filter((item) => item['Categoria'] === 'Sobremesa');
+
+    return { pizza: pizzaData, bebida: bebidaData, sobremesa: sobremesaData };
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
 export function addItem(selectedOption, newItem) {
   try {
     const jsonData = localStorage.getItem(selectedOption);
@@ -65,6 +92,8 @@ export function deleteItem(selectedOption, itemId) {
     return null;
   }
 }
+
+
 
 
 
