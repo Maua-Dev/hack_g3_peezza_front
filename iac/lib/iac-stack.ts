@@ -36,6 +36,17 @@ export class IacStack extends cdk.Stack {
       },
     })
 
+    let viewerCertificate = cloudfront.ViewerCertificate.fromCloudFrontDefaultCertificate()
+    if (stage === 'prod') {
+        viewerCertificate = cloudfront.ViewerCertificate.fromAcmCertificate(
+        Certificate.fromCertificateArn(this, projectName + 'Certificate-' + stage, acmCertificateArn),
+        {
+          aliases: [alternativeDomain],
+          securityPolicy: cloudfront.SecurityPolicyProtocol.TLS_V1_2_2021,
+        },
+        )
+    }
+    
     const cloudFrontWebDistribution = new cloudfront.CloudFrontWebDistribution(this, 'CDN', {
       comment: projectName + 'Distribution ' + stage,
       originConfigs: [
@@ -57,15 +68,17 @@ export class IacStack extends cdk.Stack {
           ],
         },
       ],
-      viewerCertificate: cloudfront.ViewerCertificate.fromAcmCertificate(
-        Certificate.fromCertificateArn(this, projectName + 'Certificate-' + stage, acmCertificateArn),
+      viewerCertificate: viewerCertificate,
+      errorConfigurations: [
         {
-          aliases: [alternativeDomain],
-          securityPolicy: cloudfront.SecurityPolicyProtocol.TLS_V1_2_2021,
+          errorCode: 403,
+          responseCode: 200,
+          responsePagePath: '/index.html',
+          errorCachingMinTtl: 0,
         },
-      ),
+      ],
     })
-
+    
     const cfnDistribution = cloudFrontWebDistribution.node.defaultChild as cloudfront.CfnDistribution
 
     cfnDistribution.addPropertyOverride('DistributionConfig.Origins.0.OriginAccessControlId', oac.getAtt('Id'))

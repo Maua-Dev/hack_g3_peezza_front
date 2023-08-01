@@ -1,12 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-// Admin-Imports
 import RoutesAdmin from './admin_interface/Routes_Admin';
-
-// Client-Imports 
 import RoutesClient from './cliente_interface/Routes_Client';
-
 import FirstScreen from './first_screen/FirstScreen';
 
 export default function App() {
