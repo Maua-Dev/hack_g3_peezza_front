@@ -1,9 +1,9 @@
 .Link {
   text-decoration: none; 
   height: 70%;
-  width: 40%
-  }
-  
+  width: 40%;
+}
+
 .Bottom {
   display: grid;
   position: fixed;
@@ -35,3 +35,8 @@
   font-size: 18px;
 }
 
+.ConfirmButton:disabled {
+  border: 1px solid black;
+  background-color: grey;
+  color: rgb(66, 66, 66);
+}
