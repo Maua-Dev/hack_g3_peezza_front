@@ -59,6 +59,25 @@ export function fetchDataCardapio() {
   }
 }
 
+export const fetchDataOrders = () => {
+  try {
+    let data = [];
+    let OrdersToDo = [];
+
+    const savedData = localStorage.getItem('Pedidos');
+    const parsedData = JSON.parse(savedData);
+    data = parsedData.tuples;
+    
+    OrdersToDo = data.filter((item) => item['status'] === 'Em preparo');
+
+    return { orders: OrdersToDo };
+
+  } catch (error) { 
+    console.error(error);
+    return null;
+  }
+}
+
 export function addItem(selectedOption, newItem) {
   try {
     const jsonData = localStorage.getItem(selectedOption);

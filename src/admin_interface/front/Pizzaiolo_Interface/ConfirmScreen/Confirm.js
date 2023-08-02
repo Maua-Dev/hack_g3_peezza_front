@@ -3,13 +3,23 @@ import './Confirm.css';
 
 
 
-export default function ConfirmScreen({useInput, isScreenOpen, orders,setOrders}) {  
+export default function ConfirmScreen({useInput, isScreenOpen, orders, setOrders}) {  
 
   const handleConfirm = (event) => {
+    let orders = [];
+    let newOrders = [];
     if (event.key === 'Enter') {
+      const data = localStorage.getItem('Pedidos');
+      const parsedData = JSON.parse(data);
+      orders = parsedData.tuples;
       const orderId = document.getElementById('idInput').value;  
-      const newOrders = orders.filter((order) => order.id !== orderId);
-      setOrders(newOrders);
+      newOrders = orders.map((item) => {
+        if (parseInt(item['id']) === parseInt(orderId)) {
+          item['status'] = 'Pronto';
+        }
+        ;
+      });
+      
     }
   };  
 

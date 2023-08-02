@@ -3,6 +3,8 @@ import "./AddOption.css";
 import { ImCancelCircle } from "react-icons/im";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { addItem } from "../../../../../../../back_operation_mock/repo_mock";
+import InputMask from "react-input-mask";
+
 export default function AddOption({ selectedOption, setShowAddOption, attributes }) {
 
   const [inputValues, setInputValues] = useState({});
@@ -33,16 +35,12 @@ export default function AddOption({ selectedOption, setShowAddOption, attributes
                     value={inputValues[attribute] || ""}
                     onChange={(e) => handleInputChange(attribute, e.target.value)}
                   />
-                ) : attribute === "Categoria" ? (
-                  <select
-                    id="category"
-                    value={inputValues[attribute] || ""}
+                ) : attribute === "CPF" ? (
+                  <InputMask 
+                    mask="999.999.999-99" 
+                    id="CPF" 
                     onChange={(e) => handleInputChange(attribute, e.target.value)}
-                  >
-                    <option value="Pizza">Pizza</option>
-                    <option value="Bebidas">Bebidas</option>
-                    <option value="Sobremesa">Sobremesa</option>
-                  </select>
+                  />
                 ) : (
                   <input
                     type="text"
@@ -57,6 +55,7 @@ export default function AddOption({ selectedOption, setShowAddOption, attributes
       </div>
     );
   }
+  
   
 
   return (

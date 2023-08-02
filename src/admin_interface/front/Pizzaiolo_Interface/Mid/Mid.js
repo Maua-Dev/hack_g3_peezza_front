@@ -3,20 +3,25 @@ import './Mid.css';
 
 export default function MidScreen({orders}) {
   
-  function ShowOrders () {
-    return orders.map((item) => (
-      <div className='Box' key={item.id}>
-        <h2>{item.id}</h2>
+  function ShowOrders() {
+    if (!orders || !orders.orders || orders.orders.length === 0) {
+      return <div>Nenhum pedido encontrado.</div>;
+    }
+  
+    return orders.orders.map((item) => (
+      <div className='Box' key={item['ID']}>
+        <h2>{item['ID']} - {item.Nome}</h2>
         <ul>
-          {item.order.map((orderItem, index) => (
+          {item.cart.map((orderItem, index) => (
             <li key={index}>
-              {orderItem.item} : {orderItem.quantity}
+              {orderItem.Item} : {orderItem.quantidade}
             </li>
           ))}
         </ul>
       </div>
     ));
   };
+  
 
   return (
     <div className='MidScreen'>

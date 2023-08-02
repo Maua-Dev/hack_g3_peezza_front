@@ -27,10 +27,16 @@ export default function Login() {
     console.log(accounts);
     const existingUser = accounts.find((account) => account['ID'].toString() === idUser && account.Senha === password);
 
-    if (existingUser) {
-      navigate('administrador/');
-    } else {
-      alert('Usuário ou senha incorretos!');
+    switch (existingUser.Cargo) {
+      case 'Administrador':
+        navigate('administrador/');
+        break;
+      case 'Pizzaiolo':
+        navigate('pizzaiolo/');
+        break;
+      default:
+        alert('Usuário ou senha incorretos!');
+        break;
     }
   };
 

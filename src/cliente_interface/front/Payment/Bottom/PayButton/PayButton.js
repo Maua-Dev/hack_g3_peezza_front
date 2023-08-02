@@ -46,11 +46,13 @@ export const PayButton = ({ continues, selectedOption }) => {
         "Método de Pagamento": paymentOption,
         "Data e Hora": formattedDateTime,
         cart: cart,
-        status: "Em preparo"
+        status: "Em preparo",
       };
 
       localStorage.setItem("order", JSON.stringify(order));
       addItem("Pedidos", order);
+      console.log(order); 
+
     } catch (error) {
       console.log(error);
     }

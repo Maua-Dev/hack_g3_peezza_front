@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './Pizzaiolo.css';
-import { fetchData } from './data/repo_mock';
+import { fetchDataOrders } from '../../../back_operation_mock/repo_mock';
 import TopScreen from './Top/Top';
 import MidScreen from './Mid/Mid';
 import BottomScreen from './Bottom/Bottom';
@@ -8,17 +8,17 @@ import ConfirmScreen from './ConfirmScreen/Confirm';
 
 export default function Pizzaiolo() {
 
-  const [team] = useState([{ 'nome': 'Felipe' }, { 'nome': 'Carlos' }]);
   const [orders, setOrders] = useState([]);
   const [isScreenOpen, setIsScreenOpen] = useState(false);
   const useInput = useRef(null);
 
   useEffect(() => {
     const getData = async () => {
-      const data = fetchData();
+      const data = fetchDataOrders();
       if (data) {
         const OrdersData = data;
         setOrders(OrdersData);
+        console.log(OrdersData);
       }
     };
     getData();
@@ -49,7 +49,7 @@ export default function Pizzaiolo() {
       <ConfirmScreen useInput={useInput} isScreenOpen={isScreenOpen} orders={orders} setOrders={setOrders} />
       <TopScreen orders={orders} />
       <MidScreen orders={orders} />
-      <BottomScreen team={team} />
+      <BottomScreen />
     </div>
   );
 }

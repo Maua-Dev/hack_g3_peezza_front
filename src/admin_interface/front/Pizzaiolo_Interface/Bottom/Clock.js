@@ -14,9 +14,9 @@ export default function Clock() {
     return (
       <div className="Clock">
         <h1>
-          {time.getHours()}:
-          {time.getMinutes()}:
-          {time.getSeconds()}
+          {time.getHours().toString().padStart(2, '0')}:
+          {time.getMinutes().toString().padStart(2, '0')}:
+          {time.getSeconds().toString().padStart(2, '0')}
         </h1>
       </div>
     );

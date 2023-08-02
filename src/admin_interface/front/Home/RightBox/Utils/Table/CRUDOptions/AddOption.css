@@ -41,6 +41,14 @@
         height: 30%;
     }
 
+    .InputContainer .Input #role {
+      border-radius: 10px;
+      border: 1px black solid;
+      text-align: center;
+      width: fit-content;
+      height: 40%;
+    }
+
     .InputContainer .Input #category {
       border-radius: 10px;
       border: 1px black solid;

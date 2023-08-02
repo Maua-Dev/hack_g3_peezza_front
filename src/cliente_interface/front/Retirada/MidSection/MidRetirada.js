@@ -3,13 +3,12 @@ import './MidRetirada.css';
 import { Bottom } from "../Bottom/BottomRetirada";
 
 export const Mid = ({setButtonEnabled}) => {
-  const nome = localStorage.getItem('nome');
   const storedOrder = JSON.parse(localStorage.getItem('order'));
+  const nome = storedOrder.Nome;
   const [order, setStatus] = useState(storedOrder || { status: 'Em preparo' });
   const [status, setMidStatus] = useState(order.status);
 
   useEffect(() => {
-    
     const updateStatus = () => {
       setTimeout(() => {
         setStatus(prevOrder => ({
