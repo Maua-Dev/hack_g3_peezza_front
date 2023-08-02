@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# peEZza - Pizzaria de Sabores Únicos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo peEZza](link_para_logo.png)
 
-## Available Scripts
+## Sobre o Projeto
 
-In the project directory, you can run: 
+peEZza é um projeto desenvolvido para o Hackathon da Dev Community Mauá. A ideia é criar um site para uma pizzaria que funcione exclusivamente por retirada, sem a necessidade de atendentes, apenas com pizzaiolos talentosos na cozinha.
 
-### `npm start`
+O objetivo do projeto é proporcionar aos clientes uma experiência prática e saborosa, permitindo que eles façam seus pedidos pelo site e retirem as pizzas prontas na pizzaria.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Cardápio para Clientes Mobile
 
-### `npm test`
+O site peEZza possui um cardápio completo e interativo para os clientes acessarem de seus dispositivos móveis. A interface é amigável e apresenta todos os sabores disponíveis, cada um com uma descrição detalhada e fotos apetitosas.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Área Administrativa (Desktop)
 
-### `npm run build`
+A área administrativa do peEZza é voltada para os funcionários da pizzaria. Ela oferece uma série de funcionalidades para facilitar a gestão do negócio, como:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Gerenciamento de Funcionários
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Cadastro e visualização dos pizzaiolos atuantes na pizzaria.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Pedidos em Tempo Real
 
-### `npm run eject`
+- Acompanhamento em tempo real dos pedidos feitos pelos clientes pelo site.
+- Possibilidade de alterar o status dos pedidos.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Cardápio Personalizado
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Adicionar, editar ou remover pizzas do cardápio.
+- Definir ingredientes e preços correspondentes para cada pizza.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Relatório de Feedbacks
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Registro dos feedbacks dos clientes para melhorias contínuas no serviço.
 
-## Learn More
+### Área do Pizzaiolo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para otimizar o processo de preparação das pizzas, foi criada uma área exclusiva para os pizzaiolos. Nessa área, eles podem:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Visualizar os pedidos que estão em preparação e confirmar a conclusão do pedido.
+- Receber notificações sobre novos pedidos.
 
-### Code Splitting
+## Tecnologias Utilizadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Frontend: HTML, CSS, JavaScript e React.js
+- Backend: Foi utilizado apenas arquivos (solitado pela Organização).
+- Hospedagem: AWS
 
-### Analyzing the Bundle Size
+## Agradecimentos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Agradecemos a todos os participantes do Hackathon da Dev Community por tornar esse projeto possível!
