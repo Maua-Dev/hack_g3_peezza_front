@@ -22,7 +22,7 @@ export const PayButton = ({ continues, selectedOption }) => {
       var name = JSON.parse(localStorage.getItem("nome"));
       var number = JSON.parse(localStorage.getItem("contato"));
       var cart = JSON.parse(localStorage.getItem("carrinho"));
-      var valorTotal = JSON.parse(localStorage.getItem("valorTotal"));
+      var valorTotal = JSON.parse(localStorage.getItem("valorTotal")).toFixed(2);
       var paymentOption = selectedOption;
 
       switch (paymentOption) {
