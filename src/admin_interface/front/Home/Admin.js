@@ -5,7 +5,9 @@ import RightBox from './RightBox/Utils/Utils';
 
 export default function Admin() {
   
-  const Username = 'Felipe';
+  const user = localStorage.getItem('user');
+  const userJson = JSON.parse(user);
+  const Username = userJson.Nome;
   const [selectedOption, setSelectedOption] = useState(null);
 
   return (

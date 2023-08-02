@@ -20,15 +20,14 @@ export default function Login() {
   };
 
   const handleLogin = () => {
-    console.log(fetchData('Funcionario'));
     const accounts = fetchData('Funcionario').tuples;
     const idUser = document.getElementById('idUser').value.trim();
     const password = document.getElementById('password').value;
-    console.log(accounts);
     const existingUser = accounts.find((account) => account['ID'].toString() === idUser && account.Senha === password);
 
     switch (existingUser.Cargo) {
       case 'Administrador':
+        localStorage.setItem('user', JSON.stringify(existingUser));
         navigate('administrador/');
         break;
       case 'Pizzaiolo':

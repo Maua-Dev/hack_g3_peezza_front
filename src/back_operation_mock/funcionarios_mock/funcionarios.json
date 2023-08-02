@@ -1,36 +1,36 @@
 {
-    "Funcionario": [
-      [
+  "Funcionario": [
+    [
       "ID",
       "Nome",
       "CPF",
       "Senha",
       "Cargo",
       "Salario"
-      ],
-      {
+    ],
+    {
       "ID": 1000,
-      "Nome": "Ademir da Pizza",
+      "Nome": "Ademir",
       "CPF": "111.222.333-44",
       "Senha": "1234",
       "Cargo": "Administrador",
       "Salario": "15000.00"
-      },
-      {
+    },
+    {
       "ID": 1001,
       "Nome": "Pedro Pizzaiolo",
       "CPF": "222.333.444-55",
       "Senha": "1234",
       "Cargo": "Pizzaiolo",
       "Salario": "8000.00"
-      },
-      {
+    },
+    {
       "ID": 1002,
       "Nome": "Pati Pizzaiola",
       "CPF": "333.444.555-66",
       "Senha": "1234",
       "Cargo": "Pizzaiolo",
       "Salario": "8000.00"
-      }
-    ]
+    }
+  ]
 }
