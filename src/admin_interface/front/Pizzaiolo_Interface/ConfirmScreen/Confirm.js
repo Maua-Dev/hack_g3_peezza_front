@@ -1,27 +1,21 @@
 import React from "react";
 import './Confirm.css';
+import { updateItem } from "../../../../back_operation_mock/repo_mock";
 
-
-
-export default function ConfirmScreen({useInput, isScreenOpen, orders, setOrders}) {  
+export default function ConfirmScreen({ useInput, isScreenOpen, orders }) {
 
   const handleConfirm = (event) => {
-    let orders = [];
-    let newOrders = [];
     if (event.key === 'Enter') {
-      const data = localStorage.getItem('Pedidos');
-      const parsedData = JSON.parse(data);
-      orders = parsedData.tuples;
-      const orderId = document.getElementById('idInput').value;  
-      newOrders = orders.map((item) => {
-        if (parseInt(item['id']) === parseInt(orderId)) {
-          item['status'] = 'Pronto';
-        }
-        ;
-      });
-      
-    }
-  };  
+      try {
+      const idInput = useInput.current.value;
+      const indexItem = orders.findIndex((item) => parseInt(item['ID']) === parseInt(idInput));
+      orders[indexItem].status = "Pronto";
+      updateItem("Pedidos", orders[indexItem]);
+      } catch (error) {
+        alert("ID inválido.");  
+      };
+    };
+  } 
 
   return (
     <div>
@@ -33,4 +27,4 @@ export default function ConfirmScreen({useInput, isScreenOpen, orders, setOrders
       )}
     </div>
   );
-};
+}

@@ -65,12 +65,14 @@ export const fetchDataOrders = () => {
     let OrdersToDo = [];
 
     const savedData = localStorage.getItem('Pedidos');
-    const parsedData = JSON.parse(savedData);
-    data = parsedData.tuples;
-    
-    OrdersToDo = data.filter((item) => item['status'] === 'Em preparo');
-
-    return { orders: OrdersToDo };
+    if (savedData) {
+      const parsedData = JSON.parse(savedData);
+      data = parsedData.tuples;     
+      OrdersToDo = data.filter((item) => item['status'] === 'Em preparo');
+      return { OrdersToDo };
+    } else {
+      return null;
+    }
 
   } catch (error) { 
     console.error(error);
@@ -98,20 +100,31 @@ export function addItem(selectedOption, newItem) {
   }
 }
 
+export function updateItem(selectedOption, newItem) {
+  try {
+    const jsonData = localStorage.getItem(selectedOption);
+    const data = JSON.parse(jsonData);
+    const itemIndex = data.tuples.findIndex((item) => parseInt(item["ID"]) === parseInt(newItem["ID"]));
+    console.log(itemIndex);
+    data.tuples[itemIndex] = newItem;
+    const updatedJsonData = JSON.stringify(data);
+    console.log(updatedJsonData);
+    localStorage.setItem(selectedOption, updatedJsonData);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export function deleteItem(selectedOption, itemId) {
   try {
     const jsonData = localStorage.getItem(selectedOption);
-    console.log(jsonData)
     if (!jsonData) {
       throw new Error(`No data found for selectedOption: ${selectedOption}`);
     }
     const data = JSON.parse(jsonData);
     data.tuples = data.tuples.filter((item) => parseInt(item["ID"]) !== parseInt(itemId));
-    
     const updatedJsonData = JSON.stringify(data);
     localStorage.setItem(selectedOption, updatedJsonData);
-
-    return data;
   } catch (error) {
     console.error('Error deleting item:', error.message);
     return null;

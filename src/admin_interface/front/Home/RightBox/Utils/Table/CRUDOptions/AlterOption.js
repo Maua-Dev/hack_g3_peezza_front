@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./AlterOption.css";
 import { ImCancelCircle } from "react-icons/im";
 import { AiOutlineCheckCircle } from "react-icons/ai";
+import InputMask from "react-input-mask";
+import { updateItem } from "../../../../../../../back_operation_mock/repo_mock";
 
-export default function AlterOption({ setShowAlterOption, attributes, data }) {
+export default function AlterOption({ selectedOption, setShowAlterOption, attributes, data }) {
   const [idToAlter, setIdToAlter] = useState("");
   const [itemToAlter, setItemToAlter] = useState(null);
 
@@ -14,17 +16,46 @@ export default function AlterOption({ setShowAlterOption, attributes, data }) {
       <div className="InputContainer">
         {attributes.map((attribute, index) => (
           <div key={index} className="Input">
-            <label>{attribute}</label>
-            <input
-              type="text"
-              value={itemToAlter[attribute]}
-              onChange={(e) => handleInputChange(attribute, e.target.value)}
-            />
+            {attribute === "ID" ? (
+              <></>
+            ) : (
+              <>
+                <label>{attribute}</label>
+                {attribute === "Preço" ? (
+                  <input
+                    type="number"
+                    value={itemToAlter[attribute]}
+                    onChange={(e) => handleInputChange(attribute, e.target.value)}
+                  />
+                ) : attribute === "CPF" ? (
+                  <InputMask 
+                    mask="999.999.999-99" 
+                    value={itemToAlter[attribute]}
+                    id="CPF" 
+                    onChange={(e) => handleInputChange(attribute, e.target.value)}
+                  />
+                ) : attribute ===  "Contato" ? (
+                  <InputMask 
+                    mask="(99) 99999-9999"
+                    value={itemToAlter[attribute]}
+                    id="Contato"
+                    onChange={(e) => handleInputChange(attribute, e.target.value)}
+                  />
+                ):(
+                  <input
+                    type="text"
+                    value={itemToAlter[attribute]}
+                    onChange={(e) => handleInputChange(attribute, e.target.value)}
+                  />
+                )}
+              </>
+            )}
           </div>
         ))}
       </div>
     );
   }
+  
 
   function handleInputChange(attribute, value) {
     setItemToAlter((prevItem) => ({ ...prevItem, [attribute]: value }));
@@ -45,6 +76,7 @@ export default function AlterOption({ setShowAlterOption, attributes, data }) {
 
   function handleSaveButtonClick() {
     console.log("Modified item:", itemToAlter);
+    updateItem(selectedOption, itemToAlter);
     setShowAlterOption(false);
   }
 

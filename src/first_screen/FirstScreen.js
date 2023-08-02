@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./FirstScreen.css";
+import { fetchData } from "../back_operation_mock/repo_mock";
 
 export default function FirstScreen() {
+
+  useEffect (() => {
+    fetchData("Pedidos");
+    fetchData("Cardapio");
+    fetchData("Funcionarios");
+  }, []);
+
   return (
     <div className="FirstScreen">
       <Link to='/admin' className="Box" id="admin">

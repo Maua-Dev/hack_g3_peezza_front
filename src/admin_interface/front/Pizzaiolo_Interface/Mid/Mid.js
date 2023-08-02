@@ -4,11 +4,11 @@ import './Mid.css';
 export default function MidScreen({orders}) {
   
   function ShowOrders() {
-    if (!orders || !orders.orders || orders.orders.length === 0) {
+    if (!orders || orders.length === 0) {
       return <div>Nenhum pedido encontrado.</div>;
     }
   
-    return orders.orders.map((item) => (
+    return orders.map((item) => (
       <div className='Box' key={item['ID']}>
         <h2>{item['ID']} - {item.Nome}</h2>
         <ul>

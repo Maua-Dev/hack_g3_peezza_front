@@ -71,7 +71,7 @@ export default function Table({ selectedOption }) {
           <button id='delete' onClick={() => setShowDeleteOption(!showDeleteOption)}>DELETAR</button>
         </div>
         {showAddOption && <AddOption selectedOption={selectedOption} showAddOption={showAddOption} setShowAddOption={setShowAddOption} attributes={tableAttributes} />}
-        {showAlterOption && <AlterOption setShowAlterOption={setShowAlterOption} attributes={tableAttributes} data={tableData} />}
+        {showAlterOption && <AlterOption selectedOption={selectedOption} setShowAlterOption={setShowAlterOption} attributes={tableAttributes} data={tableData} />}
         {showDeleteOption && <DeleteOption selectedOption={selectedOption} setShowDeleteOption={setShowDeleteOption} />}
       </div>
       <div className='TableBox'>

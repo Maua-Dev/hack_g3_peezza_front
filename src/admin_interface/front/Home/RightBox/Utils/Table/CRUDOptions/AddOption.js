@@ -41,7 +41,13 @@ export default function AddOption({ selectedOption, setShowAddOption, attributes
                     id="CPF" 
                     onChange={(e) => handleInputChange(attribute, e.target.value)}
                   />
-                ) : (
+                ) : attribute ===  "Contato" ? (
+                  <InputMask 
+                    mask="(99) 99999-9999"
+                    id="Contato"
+                    onChange={(e) => handleInputChange(attribute, e.target.value)}
+                  />
+                ):(
                   <input
                     type="text"
                     value={inputValues[attribute] || ""}
