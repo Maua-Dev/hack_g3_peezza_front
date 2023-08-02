@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { addItem } from "../../../../../back_operation_mock/repo_mock";
 
 export const PayButton = ({ continues, selectedOption }) => {
-
   const currentDate = new Date();
 
   const year = currentDate.getFullYear();
@@ -15,7 +14,6 @@ export const PayButton = ({ continues, selectedOption }) => {
   const seconds = currentDate.getSeconds().toString().padStart(2, '0');
 
   const formattedDateTime = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
-
 
   function saveOrder() {
     try {
@@ -38,7 +36,7 @@ export const PayButton = ({ continues, selectedOption }) => {
         default:
           paymentOption = "Erro";
       }
-      
+
       var order = {
         Nome: name,
         Contato: number,
@@ -51,12 +49,16 @@ export const PayButton = ({ continues, selectedOption }) => {
 
       localStorage.setItem("order", JSON.stringify(order));
       addItem("Pedidos", order);
-      console.log(order); 
+      console.log(order);
 
+      localStorage.removeItem("nome");
+      localStorage.removeItem("contato");
+      localStorage.removeItem("carrinho");
+      localStorage.removeItem("valorTotal");
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 
   return (
     <Link to={"/client/retirada/"} className="Link">
