@@ -1,6 +1,6 @@
-# peEZza - Pizzaria de Sabores Únicos
+# peEZza - a Pizzaria na Palma da Mão
 
-![Logo peEZza](link_para_logo.png)
+https://d26qibxslc9w4v.cloudfront.net/
 
 ## Sobre o Projeto
 
