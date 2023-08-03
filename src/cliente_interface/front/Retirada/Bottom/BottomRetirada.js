@@ -3,7 +3,7 @@ import "./BottomRetirada.css";
 import { Link } from "react-router-dom";
 
 export const Bottom = ({ isButtonEnabled }) => {
-
+  
   function setNullLocalStorage() {
     localStorage.setItem("order", null);
   }
