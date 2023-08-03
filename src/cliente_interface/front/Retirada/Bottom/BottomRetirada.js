@@ -4,20 +4,23 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export const Bottom = ({ isButtonEnabled }) => {
-   
   const [status, setStatus] = useState(false);
+
   useEffect(() => {
-  if (isButtonEnabled === "Pronto") {
-    setStatus(true);
-    console.log(isButtonEnabled);
+    if (isButtonEnabled === "Pronto") {
+      setStatus(true);
+    }
+  }, [isButtonEnabled]);
+
+  // Função para limpar o localStorage de "order"
+  function clearOrder() {
+    localStorage.removeItem("order");
   }
-  }, [setStatus,isButtonEnabled]);
 
   return (
     <div className="Bottom">
       <Link to={"/client/feedback/"} className="Link">
-        {}
-        <button className="ConfirmButton" disabled={!status}>
+        <button className="ConfirmButton" disabled={!status} onClick={clearOrder}>
           Confirme a retirada
         </button>
       </Link>
