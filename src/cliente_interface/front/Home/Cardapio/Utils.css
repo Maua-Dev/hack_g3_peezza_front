@@ -6,6 +6,7 @@
     }
 
     .ItemBoxSlctd .blur {
+      display: flex;
       height: 100vh;
       width: 100vw;
       position: fixed;
@@ -27,7 +28,6 @@
 
     .ItemBoxSlctd .box .imagem {
       position: absolute;
-      top: 0;
       width: 100%;
       height: 40%;
       border-radius: 10px 10px 0 0;

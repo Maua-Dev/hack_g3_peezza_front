@@ -58,7 +58,9 @@ export const Bottom = () => {
     <div className={`Carrinho ${carrinhoAtivo ? 'Active' : ''}`}>
         <button onClick={handleCarrinhoClick}>
           <span>
+            {carrinhoAtivo && <div className="bar-Top" />}
             Carrinho
+            {!carrinhoAtivo && <div className="bar-Top" />}
           </span>
         </button>
         {Cadastro(nome,contato,setNome,setContato)}

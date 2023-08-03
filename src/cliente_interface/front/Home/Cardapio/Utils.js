@@ -30,8 +30,10 @@ export const showItens = (item, handleItemClick, clickedItem) => {
 export const ItemBoxSlctd = ({item, handleItemClick, handleButtonClick}) => {
   return (
     <div className="ItemBoxSlctd">
-      <div className="blur" onClick={() => {handleItemClick(null)}}></div>
+      <div className="blur" onClick={() => {handleItemClick(null)}} />
       <div className="box">
+        <div className="sair">
+        </div>
         <img className='imagem' src={item.Imagem} alt="Imagem"></img>
         <div className="text-item">
           <header>{item.Item}</header>

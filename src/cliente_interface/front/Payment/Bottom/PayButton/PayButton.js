@@ -50,7 +50,8 @@ export const PayButton = ({ continues, selectedOption }) => {
       };
       localStorage.setItem("order", JSON.stringify(order));
       addItem("Pedidos", order);
-      console.log(order); 
+      localStorage.removeItem("carrinho");
+      localStorage.removeItem("valorTotal");
     } catch (error) {
       console.log(error);
     }
