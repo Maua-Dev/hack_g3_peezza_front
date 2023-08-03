@@ -62,8 +62,6 @@ export default function AddOption({ selectedOption, setShowAddOption, attributes
     );
   }
   
-  
-
   return (
     <div className={"TableInputOptions"}>
       {renderInputs()}

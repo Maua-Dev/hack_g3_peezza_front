@@ -1,26 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./BottomRetirada.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 export const Bottom = ({ isButtonEnabled }) => {
-  const [status, setStatus] = useState(false);
-
-  useEffect(() => {
-    if (isButtonEnabled === "Pronto") {
-      setStatus(true);
-    }
-  }, [isButtonEnabled]);
-
-  // Função para limpar o localStorage de "order"
-  function clearOrder() {
-    localStorage.removeItem("order");
+  
+  function setNullLocalStorage() {
+    localStorage.setItem("order", null);
   }
 
   return (
     <div className="Bottom">
       <Link to={"/client/feedback/"} className="Link">
-        <button className="ConfirmButton" disabled={!status} onClick={clearOrder}>
+        <button className="ConfirmButton" onClick={setNullLocalStorage} disabled={!isButtonEnabled}>
           Confirme a retirada
         </button>
       </Link>

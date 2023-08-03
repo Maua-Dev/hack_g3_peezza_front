@@ -1,7 +1,7 @@
 import React from 'react';
 import './Top.css';
 
-export default function TopScreen({orders}){
+export default function TopScreen({ orders, closedOrders, numberOrders }){
   const Group = (text, variable) => {
     return (
       <div className='Group'>
@@ -15,9 +15,9 @@ export default function TopScreen({orders}){
 
   return (
   <div className='TopScreen'>
-    {Group("Número Pedidos:", orders.length)}
+    {Group("Número Pedidos:", numberOrders)}
     {Group("Pedidos Abertos:", orders.length)}
-    {Group("Pedidos Concluídos:", orders.length)}
+    {Group("Pedidos Concluídos:", closedOrders)}
   </div>
   );
 }

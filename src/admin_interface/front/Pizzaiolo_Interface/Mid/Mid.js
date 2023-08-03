@@ -1,11 +1,17 @@
 import React from 'react';
 import './Mid.css';
+import { RiAlarmWarningLine } from 'react-icons/ri';
 
 export default function MidScreen({orders}) {
   
   function ShowOrders() {
     if (!orders || orders.length === 0) {
-      return <div>Nenhum pedido encontrado.</div>;
+      return(
+        <div id="warning">
+          Nenhum pedido encontrado.
+          <RiAlarmWarningLine id='icon' />
+        </div>
+      ); 
     }
   
     return orders.map((item) => (

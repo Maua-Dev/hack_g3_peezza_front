@@ -46,13 +46,8 @@ export const PayButton = ({ continues, selectedOption }) => {
         cart: cart,
         status: "Em preparo",
       };
-
       localStorage.setItem("order", JSON.stringify(order));
       addItem("Pedidos", order);
-      console.log(order);
-
-      localStorage.removeItem("nome");
-      localStorage.removeItem("contato");
       localStorage.removeItem("carrinho");
       localStorage.removeItem("valorTotal");
     } catch (error) {
