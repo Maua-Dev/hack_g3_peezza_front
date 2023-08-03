@@ -14,7 +14,6 @@ function Home() {
   useEffect(() => {
     const getData = async () => {
       const data = fetchDataCardapio();
-      console.log(data)
       if (data) {
         const { pizza, bebida, sobremesa } = data;
         setPizza(pizza);

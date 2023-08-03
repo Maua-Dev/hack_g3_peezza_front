@@ -14,6 +14,8 @@ export default function Pizzaiolo() {
   const [isScreenOpen, setIsScreenOpen] = useState(false);
   const useInput = useRef(null);
   const focusScreen = useRef(null);
+  const [closedOrders, setClosedOrders] = useState(0);
+  const [numberOrders, setNumberOrders] = useState(0);
 
   useEffect(() => {
     const getData = async () => {
@@ -21,6 +23,7 @@ export default function Pizzaiolo() {
       if (data) {
         const OrdersData = data.OrdersToDo;
         setOrders(OrdersData);
+        setNumberOrders(closedOrders + orders.length);
       } else {
         console.log("Não foi possível carregar os pedidos.");
       }
@@ -28,7 +31,7 @@ export default function Pizzaiolo() {
     getData();
     const interval = setInterval(getData, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [orders.length, closedOrders]);
 
   useEffect(() => {
     if (isScreenOpen && useInput.current) {
@@ -44,7 +47,7 @@ export default function Pizzaiolo() {
         setIsScreenOpen(true);
       }
     } else if (event.key === 'Escape') {
-      setIsScreenOpen(false); 
+      setIsScreenOpen(false);
     }
   };
 
@@ -54,8 +57,8 @@ export default function Pizzaiolo() {
 
   return (
     <div className="Pizzaiolo" onKeyDown={handleKeyPress} tabIndex={0} ref={focusScreen}>
-      <ConfirmScreen useInput={useInput} isScreenOpen={isScreenOpen} orders={orders} setOrders={setOrders} setIsScreenOpen={setIsScreenOpen} />
-      <TopScreen orders={orders} />
+      <ConfirmScreen useInput={useInput} isScreenOpen={isScreenOpen} orders={orders} closedOrders={closedOrders} setClosedOrders={setClosedOrders} setNumberOrders={setNumberOrders} />
+      <TopScreen orders={orders} closedOrders={closedOrders} numberOrders={numberOrders} />
       <MidScreen orders={orders} />
       <BottomScreen />
     </div>

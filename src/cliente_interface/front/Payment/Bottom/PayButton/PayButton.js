@@ -48,11 +48,9 @@ export const PayButton = ({ continues, selectedOption }) => {
         cart: cart,
         status: "Em preparo",
       };
-
       localStorage.setItem("order", JSON.stringify(order));
       addItem("Pedidos", order);
       console.log(order); 
-
     } catch (error) {
       console.log(error);
     }

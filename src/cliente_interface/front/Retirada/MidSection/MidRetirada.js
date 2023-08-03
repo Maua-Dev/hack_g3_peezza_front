@@ -2,32 +2,39 @@ import React, { useState, useEffect } from "react";
 import './MidRetirada.css';
 import { Bottom } from "../Bottom/BottomRetirada";
 
-export const Mid = ({setButtonEnabled}) => {
+export const Mid = ({ setButtonEnabled }) => {
   const storedOrder = JSON.parse(localStorage.getItem('order'));
-  const nome = storedOrder.Nome;
-  const [order, setStatus] = useState(storedOrder || { status: 'Em preparo' });
-  const [status, setMidStatus] = useState(order.status);
+  const [status, setStatus] = useState(storedOrder['status']);
+  if (status === 'Pronto') {
+    setButtonEnabled(true);
+  }
 
   useEffect(() => {
-    const updateStatus = () => {
-      setTimeout(() => {
-        setStatus(prevOrder => ({
-          ...prevOrder,
-          status: "Pronto"
-        }));
-      }, 5000); 
+    const getStatus = () => {
+      const DataPedidos = JSON.parse(localStorage.getItem('Pedidos'));
+      const indexItem = DataPedidos.tuples.findIndex(
+        (item) => item['Nome'] === storedOrder['Nome'] &&
+        item['Contato'] === storedOrder['Contato'] &&
+        item['Data e Hora'] === storedOrder['Data e Hora']
+      );
+      if (indexItem !== -1) {
+        const statuslocal = DataPedidos.tuples[indexItem]['status'];
+        localStorage.setItem('order', JSON.stringify(DataPedidos.tuples[indexItem]));
+        setStatus(statuslocal);
+        if (statuslocal === 'Pronto') {
+          setButtonEnabled(true);
+        }
+      }
     };
-    updateStatus();
-    setMidStatus(order.status);
-    setButtonEnabled(order.status);
-
-    return () => clearTimeout(updateStatus);
-  }, [order.status, setButtonEnabled]);
+    const intervalId = setInterval(getStatus, 5000);
+    return () => clearInterval(intervalId);
+  }, [setButtonEnabled, setStatus, storedOrder]);
+  
 
   return (
     <div className="mid_p">
       <div className="pedido">
-        <h1>{nome} seu pedido foi enviado:</h1>
+        <h1>{storedOrder.Nome} seu pedido foi enviado:</h1>
       </div>
       <div>
         <img src={"https://djzvsk74tjgdb.cloudfront.net/peeza/Outros/LoadingPizza.gif"} alt="Loading..." />
@@ -35,9 +42,8 @@ export const Mid = ({setButtonEnabled}) => {
           <span>Status:</span>
           <div className="line"></div>
         </div>
-        <span className="centered">{order.status}</span>
+        <span className="centered">{status}</span>
       </div>
-      {}
       <Bottom status={status} />
     </div>
   );

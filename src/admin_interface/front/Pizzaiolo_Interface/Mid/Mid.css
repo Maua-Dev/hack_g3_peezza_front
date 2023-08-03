@@ -9,6 +9,21 @@
     background-color: #322C2C; 
     }
 
+    .Pizzaiolo .MidScreen #warning {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      font-size: 100px;
+      font-weight: bold;
+    }
+
+    .Pizzaiolo .MidScreen #icon {
+      font-size: 150px;
+    }
+
     .MidScreen .Box {
       display: flex;
       flex-direction: column;
