@@ -1,6 +1,7 @@
 import React from "react";
 import './DashBoard.css';
 import { PieChart, Pie } from "recharts";
+import GraphicBar from "./utils/grafico-bar";
 
 export default function DashBoard () {
   
@@ -26,6 +27,7 @@ export default function DashBoard () {
           />
         </PieChart>
       </div>
+      <GraphicBar></GraphicBar>
     </div>
   );
 } 
