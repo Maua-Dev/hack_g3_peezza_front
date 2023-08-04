@@ -14,7 +14,7 @@ export default function RightBox ({selectedOption}) {
             <div className="tittlebox">
               <h2>{selectedOption}</h2>
             </div>
-            <DashBoard />
+            <DashBoard selectedOption={selectedOption} />
           </>
         ) : selectedOption ? (
           <>
