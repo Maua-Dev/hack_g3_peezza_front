@@ -37,8 +37,6 @@ export default function PizzaGraphic ({tableData}) {
         });
       }
     }
-    console.log(mediasNotas);
-  
     return mediasNotas;
   }
 

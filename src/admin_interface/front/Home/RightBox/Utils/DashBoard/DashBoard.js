@@ -32,6 +32,7 @@ export default function DashBoard ({selectedOption}) {
       <h1>EM CONSTRUÇÃO</h1>
       <div className="Chart">
         <PizzaGraphic tableData={tableData} />
+        <GraphicBar tableData={tableData} />
       </div>
     </div>
   );
