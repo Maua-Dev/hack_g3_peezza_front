@@ -2,12 +2,21 @@ import React from "react";
 import './Utils.css';
 import Table from "./Table/Table";
 import {BiErrorCircle} from "react-icons/bi";
+import DashBoard from "./DashBoard/DashBoard";
+
+
 export default function RightBox ({selectedOption}) {
-  
   function handleShowBox(selectedOption) {
       return (
       <>
-        {selectedOption ? (
+        {selectedOption === 'FeedBack' ? (
+          <>
+            <div className="tittlebox">
+              <h2>{selectedOption}</h2>
+            </div>
+            <DashBoard selectedOption={selectedOption} />
+          </>
+        ) : selectedOption ? (
           <>
             <div className="tittlebox">
               <h2>{selectedOption}</h2>
