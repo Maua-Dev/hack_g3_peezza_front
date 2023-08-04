@@ -9,7 +9,7 @@ export default function RightBox ({selectedOption}) {
   function handleShowBox(selectedOption) {
       return (
       <>
-        {selectedOption === 'DashBoard' ? (
+        {selectedOption === 'FeedBack' ? (
           <>
             <div className="tittlebox">
               <h2>{selectedOption}</h2>

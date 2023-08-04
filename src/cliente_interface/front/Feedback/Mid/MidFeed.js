@@ -38,7 +38,7 @@ export const MidFeed = () => {
       setFeedbackText("Nenhum comentário foi enviado.");
       feedback = "Nenhum comentário foi enviado.";
     }
-    addItem("Feedbacks", {rating, comment: feedback, date: formattedDateTime})
+    addItem("Feedbacks", {Nota:rating, Comentário: feedback, Data: formattedDateTime})
     console.log(localStorage.getItem("Feedbacks"));
   };
 

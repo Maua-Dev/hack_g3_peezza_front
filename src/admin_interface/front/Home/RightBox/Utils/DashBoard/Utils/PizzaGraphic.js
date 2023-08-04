@@ -4,60 +4,54 @@ import { PieChart, Pie, Legend } from "recharts";
 
 export default function PizzaGraphic ({tableData}) {
 
-  const COLORS = ['#2F0037', '#006400', '#0000FF', '#FF0000', '#FFA500'];
-  const newData = tableData.map((data, index) => {
-    return {...data, fill: COLORS[index]};
-  });
+  const COLORS = ['#FF0000', '#2F0037', '#006400', '#0000FF', '#FFA500'];
+  const emojis = ["😡", "🙁", "😐", "😃", "😄"];
 
   function calcularMediaNotas(listaObjetos) {
-    const somasNotas = [0, 0, 0, 0, 0];
     const contagemNotas = [0, 0, 0, 0, 0];
-  
     for (const objeto of listaObjetos) {
-      const nota = objeto.rating;
+      const nota = objeto.Nota;
       if (nota >= 1 && nota <= 5) {
-        somasNotas[nota - 1] += nota;
         contagemNotas[nota - 1]++;
       }
     }
-  
-    const mediasNotas = [];
+    const Notas = [];
     for (let i = 0; i < 5; i++) {
       if (contagemNotas[i] > 0) {
-        let media = somasNotas[i] / contagemNotas[i];
-        mediasNotas.push({
-          nota: i + 1,
-          media: media,
-          fill: COLORS[media-1]
+        Notas.push({
+          nota: "Nota: " + emojis[i],
+          contagem: contagemNotas[i],
+          fill: COLORS[i]
         });
       } else {
-        mediasNotas.push({
-          nota: i + 1,
-          media: 0
+        Notas.push({
+          nota: "Nota: " + emojis[i],
+          contagem: 0,
+          fill: COLORS[i]
         });
       }
     }
-    console.log(mediasNotas);
-  
-    return mediasNotas;
+    return Notas;
   }
 
-  const mediasNotas = calcularMediaNotas(tableData);
+  const Notas = calcularMediaNotas(tableData);
 
   return(
     <div className="PizzaGraphic">
       <>
-        <PieChart width={400} height={400}>
+        <PieChart width={400} height={300}>
             <Pie
-              data={mediasNotas}
+              data={Notas}
               innerRadius={60}
               outerRadius={80}
-              paddingAngle={5}
-              dataKey="media"
+              paddingAngle={4}
+              dataKey="contagem"
               label
             />
-          <Legend />
+          <Legend formatter={(value, entry, index) => Notas[index].nota} />
         </PieChart>
+        <h1>Avaliações Totais: {tableData.length}</h1>
+        <span>| 😡 = 1 | 🙁 = 2 | 😐 = 3 | 😃 = 4 | 😄 = 5 |</span>
       </>
     </div>
   );

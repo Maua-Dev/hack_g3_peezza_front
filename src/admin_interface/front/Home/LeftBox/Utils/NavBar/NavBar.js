@@ -33,10 +33,10 @@ export function NavBar({ Icon, Name, setSelectedOption }) {
         <MdOutlineKeyboardArrowLeft id="arrow" style={{ transform: `rotate(${arrowRotation}deg)` }} />
       </div>
       {showTables && <TablesOptions handleOptionClick={handleOptionClick} />}
-      <div className="NavOptions" onClick={() => handleOptionClick('DashBoard')}>
+      <div className="NavOptions" onClick={() => handleOptionClick('FeedBack')}>
         <div className={'tittle'} >
           <Icon id="icon" />
-          <h4 id="name">DashBoard</h4>
+          <h4 id="name">Feedback</h4>
         </div>
       </div>
     </>

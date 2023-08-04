@@ -4,13 +4,14 @@ import { BarChart, Bar, XAxis, YAxis,
 CartesianGrid, Legend} from 'recharts';
 
   
-export default function GraphicBar(){
+export default function GraphicBar({tableData}){
     const data = [
         { name: "Grupo 1", value: 400, fill: "#FF5733" },
         { name: "Grupo 2", value: 300, fill: "#33FF57" },
         { name: "Grupo 3", value: 300, fill: "#5733FF" },
         { name: "Grupo 4", value: 200, fill: "#FFFF33" }
     ];
+    console.log(tableData);
 
     return (
         <BarChart width={500} height={500} data={data} >
