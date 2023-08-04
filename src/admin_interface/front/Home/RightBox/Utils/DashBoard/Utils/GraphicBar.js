@@ -1,7 +1,7 @@
 import React from "react";
 import "./GraphicBar.css";
 import { BarChart, Bar, XAxis, YAxis, 
-CartesianGrid, Legend} from 'recharts';
+CartesianGrid} from 'recharts';
 
   
 export default function GraphicBar({tableData}){
