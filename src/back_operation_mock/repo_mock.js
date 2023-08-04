@@ -1,6 +1,7 @@
 import TableDataCardapio from './cardapio_mock/cardapio_mock.json';
 import TableDataFuncionarios from './funcionarios_mock/funcionarios.json'; 
 import TableDataPedidos from './pedidos_mock/pedidos_mock.json';
+import TableDataFeedback from './feedback_mock/feedback_mock.json';
 
 export function fetchData(selectedOption) {
   try {
@@ -8,23 +9,23 @@ export function fetchData(selectedOption) {
     let data = [];
 
     const savedData = localStorage.getItem(selectedOption);
+
     if (savedData) {
       const parsedData = JSON.parse(savedData);
       attributes = parsedData.attributes;
       data = parsedData.tuples;
     } else {
-
     if (selectedOption === 'Cardapio') {
       [attributes, ...data] = TableDataCardapio[selectedOption];
     } else if (selectedOption === 'Funcionario') {
       [attributes, ...data] = TableDataFuncionarios[selectedOption];
     } else if (selectedOption === 'Pedidos') {
       [attributes, ...data] = TableDataPedidos[selectedOption];
+    } else if (selectedOption === 'Feedbacks') {
+      [attributes, ...data] = TableDataFeedback[selectedOption];
     }
-    
     localStorage.setItem(selectedOption, JSON.stringify({ attributes, tuples: data }));
     }
-
     return { attributes, tuples: data };
   } catch (error) {
     console.error(error);

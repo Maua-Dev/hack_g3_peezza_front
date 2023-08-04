@@ -34,9 +34,9 @@ export function NavBar({ Icon, Name, setSelectedOption }) {
       </div>
       {showTables && <TablesOptions handleOptionClick={handleOptionClick} />}
       <div className="NavOptions" onClick={() => handleOptionClick('DashBoard')}>
-        <div className="tittle">
+        <div className={'tittle'} >
           <Icon id="icon" />
-          <h4 id="name">{Name}</h4>
+          <h4 id="name">DashBoard</h4>
         </div>
       </div>
     </>

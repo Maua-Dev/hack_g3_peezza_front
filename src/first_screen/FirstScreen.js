@@ -8,7 +8,8 @@ export default function FirstScreen() {
   useEffect (() => {
     fetchData("Pedidos");
     fetchData("Cardapio");
-    fetchData("Funcionarios");
+    fetchData("Funcionario");
+    fetchData("Feedbacks");
   }, []);
 
   return (
