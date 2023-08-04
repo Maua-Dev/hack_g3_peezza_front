@@ -1,6 +1,7 @@
 import {React, useState, useEffect} from "react";
 import './DashBoard.css';
 import PizzaGraphic from "./Utils/PizzaGraphic";
+import GraphicBar from "./Utils/GraphicBar";
 import { fetchData } from "../../../../../../back_operation_mock/repo_mock";
 
 export default function DashBoard ({selectedOption}) {

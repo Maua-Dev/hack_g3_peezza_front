@@ -24,7 +24,7 @@ export default function PizzaGraphic ({tableData}) {
     const mediasNotas = [];
     for (let i = 0; i < 5; i++) {
       if (contagemNotas[i] > 0) {
-        let media = parseInt(somasNotas[i] / contagemNotas[i]);
+        let media = somasNotas[i] / contagemNotas[i];
         mediasNotas.push({
           nota: i + 1,
           media: media,
