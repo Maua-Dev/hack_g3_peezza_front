@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import './DashBoard.css';
 import PizzaGraphic from "./Utils/PizzaGraphic";
-import GraphicBar from "./Utils/GraphicBar";
 import { fetchData } from "../../../../../../back_operation_mock/repo_mock";
 import TableFeedBack from "./Utils/TableFeedback";
 
@@ -57,10 +56,6 @@ export default function DashBoard ({selectedOption}) {
             <h1>Gráfico de Contagem de Notas</h1>
             <PizzaGraphic id='graphic' tableData={tableData} />
           </div>
-        </div>
-        <div className="BoxGraphic" id="SecondPart">        
-          <h1>Gráfico de Média por Mês</h1>
-          <GraphicBar id='graphic' tableData={tableData} />
         </div>
         <TableFeedBack tableAttributes={tableAttributes} tableData={tableData} />
       </div>
